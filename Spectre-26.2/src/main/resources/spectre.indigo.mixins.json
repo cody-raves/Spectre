@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "package": "com.example.client.mixin.indigo",
+  "plugin": "com.example.client.mixin.indigo.SpectreIndigoMixinPlugin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "MixinAbstractTerrainRenderContext"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

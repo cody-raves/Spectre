@@ -1,0 +1,90 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.17.21'
+}
+version = '0.9.0+mc26.2'
+group = 'net.spectre'
+base { archivesName = 'spectre' }
+repositories {
+    mavenCentral()
+    maven { url = uri('https://maven.dimaskama.net/releases'); content { includeGroup 'net.dimaskama' } }
+}
+dependencies {
+    minecraft 'com.mojang:minecraft:26.2'
+    implementation 'net.fabricmc:fabric-loader:0.19.3'
+    implementation 'net.fabricmc.fabric-api:fabric-api:0.155.2+26.2'
+    for (artifact in ['imgui-java-binding', 'imgui-java-lwjgl3', 'imgui-java-natives-windows', 'imgui-java-natives-linux', 'imgui-java-natives-macos']) {
+        implementation include("io.github.spair:${artifact}:1.90.0")
+    }
+    implementation include('io.netty:netty-codec-socks:4.2.15.Final')
+    implementation include('io.netty:netty-handler-proxy:4.2.15.Final')
+    implementation include('net.dimaskama:mcef-modern:0.3.3+mc26.2.jcef146.0.10')
+    implementation 'me.friwi:jcef-api:jcef-d3de827+cef-146.0.10+g8219561+chromium-146.0.7680.179'
+    implementation 'me.friwi:jcefmaven:146.0.10'
+}
+loom { accessWidenerPath = file('src/main/resources/spectre.accesswidener') }
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-Xmaxerrs', '1000']
+}
+java { toolchain.languageVersion = JavaLanguageVersion.of(25); withSourcesJar() }
+
+// Opt-in disposable-world test. Never included in the normal distribution.
+if (project.hasProperty('smokeTest') || project.hasProperty('builderTest') || project.hasProperty('susChunkTest') || project.hasProperty('vanillaUiTest')) {
+    sourceSets.main.java.srcDir 'src/smokeTest/java'
+    sourceSets.main.resources.srcDir 'src/smokeTest/resources'
+    tasks.processResources.inputs.property('smokeMode', ['builderScaffold','builderRedstone','builderDemo','vanillaUiTest','susChunkTest','builderTest'].findAll { project.hasProperty(it) }.join(','))
+    tasks.processResources.doLast {
+        def metadata = destinationDir.toPath().resolve('fabric.mod.json').toFile()
+        def json = new groovy.json.JsonSlurper().parse(metadata)
+        json.entrypoints.client.add(project.hasProperty('builderScaffold') ? 'net.spectre.client.builder.ScaffoldSmokeClient' : project.hasProperty('builderRedstone') ? 'net.spectre.client.map.RedstoneDemoClient' : project.hasProperty('builderDemo') ? 'net.spectre.client.map.BuilderDemoClient' : project.hasProperty('vanillaUiTest') ? 'net.spectre.client.map.VanillaUiSmokeClient' : project.hasProperty('susChunkTest') ? 'net.spectre.client.map.SusChunkSmokeClient' : project.hasProperty('builderTest') ? 'net.spectre.client.map.BuilderSmokeClient' : 'net.spectre.client.map.AtlasSmokeClient')
+        metadata.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json))
+        def mixins = destinationDir.toPath().resolve('spectre.mixins.json').toFile()
+        def mixinJson = new groovy.json.JsonSlurper().parse(mixins)
+        mixinJson.client.add('SmokeBrandingCapture')
+        if (project.hasProperty('builderDemo')) mixinJson.client.add('SmokeBuilderCamera')
+        mixins.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(mixinJson))
+    }
+    loom.runs.client {
+        programArgs '--width', '1280', '--height', '800'
+        vmArg '-Dspectre.smoke=true'
+        if (project.hasProperty('builderDemo')) {
+            vmArg '-Dspectre.builderDemo=true'
+            vmArg '-Dspectre.showcase=true'
+            vmArg "-Dspectre.ffmpeg=${project.property('ffmpegPath')}"
+            if (project.hasProperty('builderFirstPerson')) vmArg '-Dspectre.builderFirstPerson=true'
+            if (project.hasProperty('builderRedstone')) vmArg '-Dspectre.builderRedstone=true'
+        }
+        if (project.hasProperty('appearancePreview')) vmArg '-Dspectre.appearancePreview=true'
+        if (project.hasProperty('featurePreview')) vmArg '-Dspectre.featurePreview=true'
+        if (project.hasProperty('skyOnly')) vmArg '-Dspectre.skyOnly=true'
+        if (project.hasProperty('builderInteractions')) vmArg '-Dspectre.builderInteractions=true'
+        if (project.hasProperty('builderPlay')) vmArg '-Dspectre.builderPlay=true'
+        if (project.hasProperty('menuPreview')) vmArg '-Dspectre.menuPreview=true'
+        if (project.hasProperty('showcase')) {
+            vmArg '-Dspectre.showcase=true'
+            vmArg "-Dspectre.ffmpeg=${project.property('ffmpegPath')}"
+        }
+        vmArg '-Dfabric.loader.disableErrorGui=true'
+    }
+}
+
+tasks.register('compileAtlasChecks', JavaCompile) {
+    source fileTree('src/main/java/net/spectre/client/map') { exclude 'HiveMapScreen.java' }
+    source fileTree('src/atlasTest/java')
+    classpath = sourceSets.main.compileClasspath
+    destinationDirectory = layout.buildDirectory.dir('atlas-checks')
+    javaCompiler = javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('atlasChecks', JavaExec) {
+    dependsOn 'compileAtlasChecks'
+    classpath = files(layout.buildDirectory.dir('atlas-checks')) + configurations.runtimeClasspath
+    mainClass = 'net.spectre.client.map.AtlasChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}
+tasks.register('atlasGpuChecks', JavaExec) {
+    dependsOn 'compileAtlasChecks'
+    classpath = files(layout.buildDirectory.dir('atlas-checks')) + configurations.runtimeClasspath
+    mainClass = 'net.spectre.client.map.AtlasGpuChecks'
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(25) }
+}

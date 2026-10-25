@@ -1,0 +1,5 @@
+pluginManagement {
+    repositories { maven { url = 'https://maven.fabricmc.net/' }; gradlePluginPortal(); mavenCentral() }
+}
+rootProject.name = 'spectre'
+include 'Spectre-26.2'

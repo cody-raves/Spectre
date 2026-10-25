@@ -1,0 +1,6 @@
+{
+  "providers": [
+    {"type": "ttf", "file": "spectre:geist-medium.ttf", "size": 10, "oversample": 3, "shift": [0, 0.5]},
+    {"type": "reference", "id": "minecraft:default"}
+  ]
+}

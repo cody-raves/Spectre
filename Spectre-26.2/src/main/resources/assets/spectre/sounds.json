@@ -1,0 +1,7 @@
+{
+  "spawner_notify": {
+    "sounds": [
+      "spectre:spawner_notify"
+    ]
+  }
+}

@@ -1,0 +1,6053 @@
+{
+  "version": "0.9.0+mc26.2",
+  "modules": [
+    {
+      "id": "aim-assist",
+      "name": "Aim Assist",
+      "description": "Smooth combat aim assist with FOV, range, part, and weapon filters.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Target Mode",
+          "type": "Mode",
+          "default": "FOV",
+          "options": [
+            "FOV",
+            "Closest"
+          ]
+        },
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "3.2",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "FOV",
+          "type": "Number",
+          "default": "90.0",
+          "range": "0.0 to 360.0"
+        },
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "0.18",
+          "range": "0.01 to 1.0"
+        },
+        {
+          "label": "Aim Part",
+          "type": "Mode",
+          "default": "Torso",
+          "options": [
+            "Head",
+            "Torso",
+            "Legs"
+          ]
+        },
+        {
+          "label": "Through Walls",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Sword",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Axe",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Mace",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Spear/Trident",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Everything",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/AimAssistModule.java"
+    },
+    {
+      "id": "anchor-macro",
+      "name": "Anchor Macro",
+      "description": "Places, charges and blows up respawn anchors on right-click.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Single",
+          "options": [
+            "Single",
+            "Double"
+          ]
+        },
+        {
+          "label": "Safety Slot",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 9.0"
+        },
+        {
+          "label": "Switch Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Charge Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Explode Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Cycle Delay",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Place Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Double Anchor",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Safe Anchor",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Guard Slot",
+          "type": "Number",
+          "default": "9.0",
+          "range": "1.0 to 9.0"
+        },
+        {
+          "label": "If Unguarded",
+          "type": "Mode",
+          "default": "Detonate",
+          "options": [
+            "Detonate",
+            "Cancel"
+          ]
+        },
+        {
+          "label": "Switch Back",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Switch Back Delay",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 3.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/SingleAnchorMacroModule.java"
+    },
+    {
+      "id": "crystal-macro",
+      "name": "Crystal Macro",
+      "description": "Breaks and places crystals while you hold right-click.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Break Delay",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Place Delay",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Break Range",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 4.5"
+        },
+        {
+          "label": "Auto Obsidian",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Obsidian Delay",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 4.0"
+        },
+        {
+          "label": "Switch Back",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "AC Profile",
+          "type": "Mode",
+          "default": "Grim-Aldenz",
+          "options": [
+            "Off",
+            "Grim-Aldenz"
+          ]
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/CrystalMacroModule.java"
+    },
+    {
+      "id": "crystal-aura",
+      "name": "Crystal Aura",
+      "description": "Places and breaks end crystals for the most damage.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Require Hold",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Hold Key",
+          "type": "Key"
+        },
+        {
+          "label": "Break Delay",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Place Delay",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Break Range",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 6.0"
+        },
+        {
+          "label": "Place Range",
+          "type": "Number",
+          "default": "4.5",
+          "range": "1.0 to 6.0"
+        },
+        {
+          "label": "Target Range",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 12.0"
+        },
+        {
+          "label": "Min Damage",
+          "type": "Number",
+          "default": "4.0",
+          "range": "0.0 to 36.0"
+        },
+        {
+          "label": "Max Self Damage",
+          "type": "Number",
+          "default": "8.0",
+          "range": "0.0 to 36.0"
+        },
+        {
+          "label": "Face Place",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Skip Friends",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Ignore Terrain",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Damage Mode",
+          "type": "Mode",
+          "default": "Normal",
+          "options": [
+            "Normal",
+            "Safe"
+          ]
+        },
+        {
+          "label": "Min Place Ratio",
+          "type": "Number",
+          "default": "1.4",
+          "range": "0.0 to 5.0"
+        },
+        {
+          "label": "Min Explode",
+          "type": "Number",
+          "default": "2.5",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Max Explode",
+          "type": "Number",
+          "default": "9.0",
+          "range": "0.0 to 36.0"
+        },
+        {
+          "label": "Min Explode Ratio",
+          "type": "Number",
+          "default": "1.1",
+          "range": "0.0 to 5.0"
+        },
+        {
+          "label": "Force Pop",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Anti Self Pop",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Anti Friend Pop",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Max Friend Place",
+          "type": "Number",
+          "default": "8.0",
+          "range": "0.0 to 36.0"
+        },
+        {
+          "label": "Max Friend Explode",
+          "type": "Number",
+          "default": "12.0",
+          "range": "0.0 to 36.0"
+        },
+        {
+          "label": "Min Friend Ratio",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 5.0"
+        },
+        {
+          "label": "Slow Damage",
+          "type": "Number",
+          "default": "3.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Slow Place Delay",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Auto Obsidian",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Obsidian Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 4.0"
+        },
+        {
+          "label": "Switch Back",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "AC Profile",
+          "type": "Mode",
+          "default": "Grim-Aldenz",
+          "options": [
+            "Off",
+            "Grim-Aldenz"
+          ]
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/CrystalAuraModule.java"
+    },
+    {
+      "id": "triggerbot",
+      "name": "Triggerbot",
+      "description": "Hits the entity under the crosshair once the swing is charged, with a reaction delay.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Reaction",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 4.0"
+        },
+        {
+          "label": "Crits",
+          "type": "Mode",
+          "default": "Smart",
+          "options": [
+            "Off",
+            "Smart",
+            "Only"
+          ]
+        },
+        {
+          "label": "Hold Attack",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Skip Shielding",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Players",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hostiles",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Passives",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Invisible",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Skip Friends",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Any Item",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Swords",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Axes",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Mace",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/TriggerbotModule.java"
+    },
+    {
+      "id": "kill-aura",
+      "name": "Kill Aura",
+      "description": "Attacks nearby targets without moving your camera.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Vehicle Range",
+          "type": "Number",
+          "default": "6.0",
+          "range": "3.0 to 8.0"
+        },
+        {
+          "label": "Players",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hostiles",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Skip Friends",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Wait Charge",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/KillAuraModule.java"
+    },
+    {
+      "id": "shield-breaker",
+      "name": "Shield Breaker",
+      "description": "Switches to an axe and hits when the targeted player is blocking with a shield.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Hit Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 6.0"
+        },
+        {
+          "label": "Switch Back",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Back Delay",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 3.0"
+        },
+        {
+          "label": "From Weapons Only",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hold Attack",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Skip Friends",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/ShieldBreakerModule.java"
+    },
+    {
+      "id": "mace",
+      "name": "Mace",
+      "description": "Swaps to a mace for smash hits while falling, with an optional smash assist.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Auto Swap",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Prefer",
+          "type": "Mode",
+          "default": "Density",
+          "options": [
+            "Density",
+            "Breach",
+            "Wind Burst",
+            "Any"
+          ]
+        },
+        {
+          "label": "From Weapons Only",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Swap Back",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Back Delay",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Smash Assist",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Smash Mode",
+          "type": "Mode",
+          "default": "Direct",
+          "options": [
+            "Direct",
+            "Delayed"
+          ]
+        },
+        {
+          "label": "Min Fall (blocks)",
+          "type": "Number",
+          "default": "4.0",
+          "range": "2.0 to 30.0"
+        },
+        {
+          "label": "Players",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hostiles",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Passives",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Invisible",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Skip Friends",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/MaceModule.java"
+    },
+    {
+      "id": "hovertotem",
+      "name": "Hover Totem",
+      "description": "Swaps a hovered inventory totem into the offhand or selected hotbar slot.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Hotbar Refill",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Hotbar Slot",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 9.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/HoverTotemModule.java"
+    },
+    {
+      "id": "fastxp",
+      "name": "FastXP",
+      "description": "Throws experience bottles every 100 ms while physical right-click is held.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/FastXpModule.java"
+    },
+    {
+      "id": "autoinvtotem",
+      "name": "Auto Inventory Totem",
+      "description": "Refills the offhand totem after a pop, through the inventory or a hotbar swap.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Inventory",
+          "options": [
+            "Inventory",
+            "Hotbar Swap"
+          ]
+        },
+        {
+          "label": "Hotbar Refill",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Hotbar Slot",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 9.0"
+        },
+        {
+          "label": "Reaction Delay",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Swap Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Close Delay",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Switch Back Delay",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 3.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/AutoInvTotemModule.java"
+    },
+    {
+      "id": "w-tap-recode",
+      "name": "W Tap Recode",
+      "description": "Timed movement taps after a successful hit.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "W Tap",
+          "options": [
+            "W Tap",
+            "S Tap",
+            "Sneak Tap",
+            "Sprint Tap"
+          ]
+        },
+        {
+          "label": "Duration",
+          "type": "Number",
+          "default": "180.0",
+          "range": "25.0 to 1000.0"
+        },
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "500.0",
+          "range": "0.0 to 2500.0"
+        },
+        {
+          "label": "Only Ground",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/WTapRecodeModule.java"
+    },
+    {
+      "id": "crystal-optimizer",
+      "name": "Crystal Optimizer",
+      "description": "Removes crystals client-side as soon as your hit breaks them.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/CrystalOptimizerModule.java"
+    },
+    {
+      "id": "friend-guard",
+      "name": "Friend Guard",
+      "description": "Stops you from hitting players on your friends list.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/FriendGuardModule.java"
+    },
+    {
+      "id": "spear-swap",
+      "name": "Spear Swap",
+      "description": "Swaps to your Lunge spear, lunges and swaps back.",
+      "category": "Combat",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Lunge Key",
+          "type": "Key"
+        },
+        {
+          "label": "Cooldown",
+          "type": "Number",
+          "default": "12.0",
+          "range": "0.0 to 40.0"
+        },
+        {
+          "label": "Switch Back",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Back Delay",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Jitter",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 4.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/combat/SpearLungeModule.java"
+    },
+    {
+      "id": "legit-auto-tool",
+      "name": "Legit Auto Tool",
+      "description": "Auto tool that only switches hotbar slots like a player.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Drill Instabreak",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Delay",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/LegitAutoToolModule.java"
+    },
+    {
+      "id": "auto-clicker",
+      "name": "Auto Clicker",
+      "description": "Clicks the left and/or right mouse button at a randomised, human CPS.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Left",
+          "type": "Mode",
+          "default": "Click",
+          "options": [
+            "Click",
+            "Hold",
+            "Off"
+          ]
+        },
+        {
+          "label": "Left Min CPS",
+          "type": "Number",
+          "default": "9.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Left Max CPS",
+          "type": "Number",
+          "default": "13.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Right",
+          "type": "Mode",
+          "default": "Off",
+          "options": [
+            "Click",
+            "Hold",
+            "Off"
+          ]
+        },
+        {
+          "label": "Right Min CPS",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Right Max CPS",
+          "type": "Number",
+          "default": "12.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Randomization",
+          "type": "Number",
+          "default": "15.0",
+          "range": "0.0 to 40.0"
+        },
+        {
+          "label": "Only While Held",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Break Blocks",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AutoClickerModule.java"
+    },
+    {
+      "id": "auto-eat",
+      "name": "Auto Eat",
+      "description": "Eats hotbar or offhand food once hunger or health drops too low.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Hunger",
+          "type": "Number",
+          "default": "16.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Health",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 20.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AutoEatModule.java"
+    },
+    {
+      "id": "auto-replenish",
+      "name": "Auto Replenish",
+      "description": "Refills a hotbar or offhand slot from the main inventory once it runs low.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Instant",
+          "options": [
+            "Instant",
+            "Legit"
+          ]
+        },
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Threshold",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 64.0"
+        },
+        {
+          "label": "Offhand",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AutoReplenishModule.java"
+    },
+    {
+      "id": "auto-reconnect",
+      "name": "Auto Reconnect",
+      "description": "Reconnects to the last server after an unexpected disconnect.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "5.0",
+          "range": "3.0 to 60.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AutoReconnectModule.java"
+    },
+    {
+      "id": "anti-vanish",
+      "name": "Anti Vanish",
+      "description": "Detects vanished players.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AntiVanishModule.java"
+    },
+    {
+      "id": "player-detection",
+      "name": "Player Detection",
+      "description": "Detects when players are in the world.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Modules To Toggle",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Disconnect",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Notification Mode",
+          "type": "Mode",
+          "default": "Both",
+          "options": [
+            "Chat",
+            "Toast",
+            "Both"
+          ]
+        },
+        {
+          "label": "Toggle On Detect",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "User Whitelist",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Webhook",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Webhook URL",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Self Ping",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Discord ID",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Enable Panic Pay",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Target Player",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Amount",
+          "type": "String",
+          "default": ""
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/PlayerDetectionModule.java"
+    },
+    {
+      "id": "auto-relog",
+      "name": "Auto Relog",
+      "description": "Relogs once when you go down to deepslate level.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Y Level",
+          "type": "Number",
+          "default": "0.0",
+          "range": "-60.0 to 16.0"
+        },
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 30.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AutoRelogModule.java"
+    },
+    {
+      "id": "anti-trap",
+      "name": "Anti Trap",
+      "description": "Allows you to escape from armor stands and chest minecarts.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Remove Existing",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Prevent Spawn",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Armor Stands",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Chest Minecarts",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AntiTrapModule.java"
+    },
+    {
+      "id": "air-stuck",
+      "name": "Air Stuck",
+      "description": "Freezes you in place, even mid-air.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AirStuckModule.java"
+    },
+    {
+      "id": "spawner-protect",
+      "name": "Spawner Protect",
+      "description": "Mines your spawners into an ender chest when someone gets close.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Stack To Deposit",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 30.0"
+        },
+        {
+          "label": "Trigger Range",
+          "type": "Number",
+          "default": "64.0",
+          "range": "16.0 to 128.0"
+        },
+        {
+          "label": "Rotation Speed",
+          "type": "Number",
+          "default": "15.0",
+          "range": "1.0 to 30.0"
+        },
+        {
+          "label": "Detect Block Updates",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Whitelist",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Break Range",
+          "type": "Number",
+          "default": "5.5",
+          "range": "1.0 to 8.0"
+        },
+        {
+          "label": "Block Update Threshold",
+          "type": "Number",
+          "default": "5.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Block Update Window",
+          "type": "Number",
+          "default": "60.0",
+          "range": "1.0 to 600.0"
+        },
+        {
+          "label": "Webhook URL",
+          "type": "String",
+          "default": ""
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/SpawnerProtectModule.java"
+    },
+    {
+      "id": "staff-list",
+      "name": "Staff List",
+      "description": "Lists online DonutSMP staff.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Region Alert",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/StaffListModule.java"
+    },
+    {
+      "id": "player-bypass",
+      "name": "Player Bypass",
+      "description": "Flags chunks with signs of underground player bases from light data.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Chunk Color",
+          "type": "Color"
+        },
+        {
+          "label": "Opacity",
+          "type": "Number",
+          "default": "140.0",
+          "range": "10.0 to 255.0"
+        },
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Sound",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Coordinates",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Auto Disconnect",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/PlayerBypassModule.java"
+    },
+    {
+      "id": "netherite-finder",
+      "name": "Netherite Finder",
+      "description": "Boxes Nether chunk sections hiding ancient debris.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Near Color",
+          "type": "Color"
+        },
+        {
+          "label": "Far Color",
+          "type": "Color"
+        },
+        {
+          "label": "Fade Distance",
+          "type": "Number",
+          "default": "192.0",
+          "range": "32.0 to 512.0"
+        },
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "512.0",
+          "range": "64.0 to 1024.0"
+        },
+        {
+          "label": "Chunk Tracers",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Tracer Count",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 8.0"
+        },
+        {
+          "label": "Advanced Finder",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Show Probes",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Probe Style",
+          "type": "Mode",
+          "default": "Dots",
+          "options": [
+            "Dots",
+            "Cubes",
+            "Pulses"
+          ]
+        },
+        {
+          "label": "Mark Missing From %",
+          "type": "Number",
+          "default": "60.0",
+          "range": "30.0 to 100.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/NetheriteFinderModule.java"
+    },
+    {
+      "id": "render-distance-toggle",
+      "name": "Render Distance Toggle",
+      "description": "Reloads chunks when you go below a Y level.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Low Distance",
+          "type": "Number",
+          "default": "2.0",
+          "range": "2.0 to 32.0"
+        },
+        {
+          "label": "Reset Y",
+          "type": "Number",
+          "default": "-1.0",
+          "range": "-64.0 to 320.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/RenderDistanceToggleModule.java"
+    },
+    {
+      "id": "home-meta",
+      "name": "Home Meta",
+      "description": "Re-sets a home, RTPs away, then teleports back home.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Home Number",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Delay (s)",
+          "type": "Number",
+          "default": "0.5",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "RTP Timeout (s)",
+          "type": "Number",
+          "default": "10.0",
+          "range": "1.0 to 30.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/HomeMetaModule.java"
+    },
+    {
+      "id": "trident-util",
+      "name": "Trident Util",
+      "description": "Use tridents out of water and charge them faster.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Charge Scale",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 1.0"
+        },
+        {
+          "label": "No Water",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/TridentUtilModule.java"
+    },
+    {
+      "id": "quantum",
+      "name": "Quantum",
+      "description": "Finds player activity in resent chunks.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Advanced Debug",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Render",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Fill Color",
+          "type": "Color"
+        },
+        {
+          "label": "Line Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/QuantumModule.java"
+    },
+    {
+      "id": "render-util",
+      "name": "Render Util",
+      "description": "Renders the chunks flagged by Quantum.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Clear On Toggle",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Highlight Source Chunks",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Fill Color",
+          "type": "Color"
+        },
+        {
+          "label": "Line Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/RenderUtilModule.java"
+    },
+    {
+      "id": "donut-nofall",
+      "name": "Donut NoFall",
+      "description": "Take no fall damage on DonutSMP.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/DonutNoFallModule.java"
+    },
+    {
+      "id": "speed-mine",
+      "name": "Donut Speed Mine",
+      "description": "Finishes breaking blocks before the full break time.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Break At",
+          "type": "Number",
+          "default": "0.7",
+          "range": "0.3 to 1.0"
+        },
+        {
+          "label": "Skip Break Delay",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Keep Instant Delay",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/SpeedMineModule.java"
+    },
+    {
+      "id": "amethyst-bypass",
+      "name": "Amethyst Bypass",
+      "description": "Shows amethyst geodes hidden by anti-xray.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Method",
+          "type": "Mode",
+          "default": "Bypass",
+          "options": [
+            "Bypass",
+            "Light",
+            "ANBS+ Scan"
+          ]
+        },
+        {
+          "label": "Min Cells",
+          "type": "Number",
+          "default": "12.0",
+          "range": "1.0 to 100.0"
+        },
+        {
+          "label": "Tracer",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AmethystBypassModule.java"
+    },
+    {
+      "id": "freecam",
+      "name": "Freecam",
+      "description": "Detached camera.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.1 to 50.0"
+        },
+        {
+          "label": "Vertical",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.2 to 5.0"
+        },
+        {
+          "label": "Smooth",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Body",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hands",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Keys Move Body",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Keep Walking",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Scroll Speed",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Chunks",
+          "type": "Number",
+          "default": "12.0",
+          "range": "2.0 to 32.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/FreecamModule.java"
+    },
+    {
+      "id": "spam",
+      "name": "Spam",
+      "description": "Spams specified messages in chat.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Messages (separate with |)",
+          "type": "String",
+          "default": "Spectre was here!"
+        },
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "20.0",
+          "range": "0.0 to 1200.0"
+        },
+        {
+          "label": "Disable On Leave",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Disable On Disconnect",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Randomise",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Auto Split Messages",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Split Length",
+          "type": "Number",
+          "default": "256.0",
+          "range": "1.0 to 256.0"
+        },
+        {
+          "label": "Split Delay",
+          "type": "Number",
+          "default": "20.0",
+          "range": "0.0 to 200.0"
+        },
+        {
+          "label": "Bypass",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Include Uppercase Characters",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Length",
+          "type": "Number",
+          "default": "16.0",
+          "range": "1.0 to 256.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/SpamModule.java"
+    },
+    {
+      "id": "coord-snapper",
+      "name": "Coord Snapper",
+      "description": "Copies the coordinates you look at or stand on with one key.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Key",
+          "type": "Key"
+        },
+        {
+          "label": "Target",
+          "type": "Mode",
+          "default": "Looked At",
+          "options": [
+            "Looked At",
+            "Own Position"
+          ]
+        },
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "256.0",
+          "range": "16.0 to 512.0"
+        },
+        {
+          "label": "Stop at Fluids",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Format",
+          "type": "Mode",
+          "default": "X Y Z",
+          "options": [
+            "X Y Z",
+            "X, Y, Z",
+            "/tp Command"
+          ]
+        },
+        {
+          "label": "Include Dimension",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Chat Confirmation",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/CoordSnapperModule.java"
+    },
+    {
+      "id": "chat-macro",
+      "name": "Chat Macro",
+      "description": "Sends chat messages or commands with a key press.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Slots",
+          "type": "Mode",
+          "default": "3",
+          "options": []
+        },
+        {
+          "label": "On Press",
+          "type": "Mode",
+          "default": "Send",
+          "options": [
+            "Send",
+            "Open in Chat"
+          ]
+        },
+        {
+          "label": "Cooldown (s)",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 10.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/ChatMacroModule.java"
+    },
+    {
+      "id": "name-protect",
+      "name": "Name Protect",
+      "description": "Shows aliases instead of player names on your screen.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Your Alias",
+          "type": "String",
+          "default": "You"
+        },
+        {
+          "label": "Extra Names",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Others",
+          "type": "Mode",
+          "default": "Keep",
+          "options": [
+            "Keep",
+            "Same Label",
+            "Numbered"
+          ]
+        },
+        {
+          "label": "Others Label",
+          "type": "Mode",
+          "default": "Player",
+          "options": [
+            "Player",
+            "Anonymous",
+            "Unknown"
+          ]
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/NameProtectModule.java"
+    },
+    {
+      "id": "no-inv-leak",
+      "name": "No Inv Leak",
+      "description": "Hides your items on screen for screen shares. Stream Only keeps them visible to you alone.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Totem",
+          "options": [
+            "Totem",
+            "Random",
+            "Empty"
+          ]
+        },
+        {
+          "label": "Fill Empty Slots",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Stream Only",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Borderless Fullscreen",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hide Tooltips",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hide Item Name",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hide Selected Slot",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Spectre HUD",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/NoInvLeakModule.java"
+    },
+    {
+      "id": "fake-stats",
+      "name": "Fake Stats",
+      "description": "Shows your own name and stats on the sidebar and tab list. Blank stats get scrambled.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Name",
+          "type": "String",
+          "default": ".gg/spectre"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/FakeStats.java"
+    },
+    {
+      "id": "weather-notifier",
+      "name": "Weather Notifier",
+      "description": "Shows an advancement-style toast when it starts raining.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Sound",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/WeatherNotifierModule.java"
+    },
+    {
+      "id": "fly",
+      "name": "Fly",
+      "description": "Lets you fly.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Abilities",
+          "options": [
+            "Abilities",
+            "Velocity"
+          ]
+        },
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "0.1",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Vertical Speed Match",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "No Sneak",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Anti Kick Mode",
+          "type": "Mode",
+          "default": "Packet",
+          "options": [
+            "Normal",
+            "Packet",
+            "None"
+          ]
+        },
+        {
+          "label": "Anti Kick Delay",
+          "type": "Number",
+          "default": "20.0",
+          "range": "1.0 to 200.0"
+        },
+        {
+          "label": "Anti Kick Off Time",
+          "type": "Number",
+          "default": "1.0",
+          "range": "1.0 to 20.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/FlyModule.java"
+    },
+    {
+      "id": "auto-walk",
+      "name": "Auto Walk",
+      "description": "Automatically walks forward.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Simple Direction",
+          "type": "Mode",
+          "default": "Forwards",
+          "options": [
+            "Forwards",
+            "Backwards",
+            "Left",
+            "Right"
+          ]
+        },
+        {
+          "label": "Disable On Input",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Disable On Y Change",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "No Unloaded Chunks",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/AutoWalkModule.java"
+    },
+    {
+      "id": "auto-jump",
+      "name": "Auto Jump",
+      "description": "Automatically jumps.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Jump",
+          "options": [
+            "Jump",
+            "LowHop"
+          ]
+        },
+        {
+          "label": "Jump If",
+          "type": "Mode",
+          "default": "Always",
+          "options": [
+            "Sprinting",
+            "Walking",
+            "Always"
+          ]
+        },
+        {
+          "label": "Velocity Height",
+          "type": "Number",
+          "default": "0.25",
+          "range": "0.0 to 2.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/AutoJumpModule.java"
+    },
+    {
+      "id": "click-tp",
+      "name": "Click TP",
+      "description": "Teleports you to the block you click on.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/ClickTpModule.java"
+    },
+    {
+      "id": "boat-fly",
+      "name": "Boat Fly",
+      "description": "Transforms your boat (or any ridden vehicle) into a plane.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 50.0"
+        },
+        {
+          "label": "Vertical Speed",
+          "type": "Number",
+          "default": "6.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Fall Speed",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Anti Fly Kick",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "40.0",
+          "range": "1.0 to 80.0"
+        },
+        {
+          "label": "Cancel Server Packets",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/BoatFlyModule.java"
+    },
+    {
+      "id": "boat-noclip",
+      "name": "Boat Noclip",
+      "description": "Fly your boat through blocks and entities.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 50.0"
+        },
+        {
+          "label": "Speed Inside Blocks",
+          "type": "Number",
+          "default": "5.0",
+          "range": "0.0 to 50.0"
+        },
+        {
+          "label": "Vertical Speed",
+          "type": "Number",
+          "default": "6.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Fall Speed",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Anti Fly Kick",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Delay",
+          "type": "Number",
+          "default": "40.0",
+          "range": "1.0 to 80.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/BoatNoclipModule.java"
+    },
+    {
+      "id": "elytra-fly",
+      "name": "Elytra Fly",
+      "description": "Gives you more control over your elytra.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Vanilla",
+          "options": [
+            "Vanilla",
+            "Packet",
+            "Pitch40",
+            "Bounce"
+          ]
+        },
+        {
+          "label": "Auto Take Off",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Fall Multiplier",
+          "type": "Number",
+          "default": "0.01",
+          "range": "0.0 to 2.0"
+        },
+        {
+          "label": "Horizontal Speed",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Vertical Speed",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Acceleration",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Acceleration Step",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.1 to 5.0"
+        },
+        {
+          "label": "Acceleration Start",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Stop In Water",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "No Unloaded Chunks",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Auto Hover",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "No Crash",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Crash Look Ahead",
+          "type": "Number",
+          "default": "5.0",
+          "range": "1.0 to 15.0"
+        },
+        {
+          "label": "Insta Drop",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Pitch40 Lower Bounds",
+          "type": "Number",
+          "default": "180.0",
+          "range": "-128.0 to 360.0"
+        },
+        {
+          "label": "Pitch40 Upper Bounds",
+          "type": "Number",
+          "default": "220.0",
+          "range": "-128.0 to 360.0"
+        },
+        {
+          "label": "Pitch40 Rotate Speed Up",
+          "type": "Number",
+          "default": "5.45",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Pitch40 Rotate Speed Down",
+          "type": "Number",
+          "default": "0.9",
+          "range": "0.5 to 2.0"
+        },
+        {
+          "label": "Auto Jump",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Yaw Lock",
+          "type": "Mode",
+          "default": "Smart",
+          "options": [
+            "Smart",
+            "Simple",
+            "None"
+          ]
+        },
+        {
+          "label": "Yaw",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 360.0"
+        },
+        {
+          "label": "Pitch Lock",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Pitch",
+          "type": "Number",
+          "default": "85.0",
+          "range": "0.0 to 90.0"
+        },
+        {
+          "label": "Restart",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Restart Delay",
+          "type": "Number",
+          "default": "7.0",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Sprint Constantly",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Manual Takeoff",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Elytra Replace",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Replace Durability",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 431.0"
+        },
+        {
+          "label": "Chest Swap",
+          "type": "Mode",
+          "default": "Never",
+          "options": [
+            "Always",
+            "Never",
+            "WaitForGround"
+          ]
+        },
+        {
+          "label": "Replenish Fireworks",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Replenish Slot",
+          "type": "Number",
+          "default": "9.0",
+          "range": "1.0 to 9.0"
+        },
+        {
+          "label": "Auto Pilot",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Use Fireworks",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Firework Delay",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Minimum Height",
+          "type": "Number",
+          "default": "120.0",
+          "range": "-128.0 to 260.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/ElytraFlyModule.java"
+    },
+    {
+      "id": "elytra-swap",
+      "name": "Elytra Swap",
+      "description": "Swaps between your chestplate and elytra with one key.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Key",
+          "type": "Key"
+        },
+        {
+          "label": "Swap Back on Landing",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Landing Delay",
+          "type": "Number",
+          "default": "4.0",
+          "range": "0.0 to 20.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/ElytraSwapModule.java"
+    },
+    {
+      "id": "entity-control",
+      "name": "Entity Control",
+      "description": "Lets you control rideable entities without a saddle.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Boats",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Horses",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Camels",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Pigs",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Striders",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Nautiluses",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Happy Ghasts",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Spoof Saddle",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Max Jump",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lock Yaw",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Cancel Server Packets",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/EntityControlModule.java"
+    },
+    {
+      "id": "entity-speed",
+      "name": "Entity Speed",
+      "description": "Makes you go faster horizontally when riding entities.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Horizontal Speed",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 50.0"
+        },
+        {
+          "label": "Only On Ground",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "In Water",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/EntitySpeedModule.java"
+    },
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "description": "Walk on liquids and powder snow like Jesus.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Powder Snow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "NCP Bypass",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Slow Down",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Water Mode",
+          "type": "Mode",
+          "default": "Solid",
+          "options": [
+            "Solid",
+            "Ignore"
+          ]
+        },
+        {
+          "label": "Dip If Burning",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Water Dip On Sneak",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Water Dip On Fall",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Water Dip Fall Height",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.0 to 255.0"
+        },
+        {
+          "label": "Lava Mode",
+          "type": "Mode",
+          "default": "Solid",
+          "options": [
+            "Solid",
+            "Ignore"
+          ]
+        },
+        {
+          "label": "Dip If Resistant",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lava Dip On Sneak",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lava Dip On Fall",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lava Dip Fall Height",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.0 to 255.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/JesusModule.java"
+    },
+    {
+      "id": "sneak",
+      "name": "Sneak",
+      "description": "Sneaks for you.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Vanilla",
+          "options": [
+            "Packet",
+            "Vanilla"
+          ]
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/SneakModule.java"
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "description": "Modifies your movement speed when moving on the ground.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Vanilla",
+          "options": [
+            "Strafe",
+            "Vanilla"
+          ]
+        },
+        {
+          "label": "Vanilla Speed",
+          "type": "Number",
+          "default": "5.6",
+          "range": "0.0 to 20.0"
+        },
+        {
+          "label": "Strafe Speed",
+          "type": "Number",
+          "default": "1.6",
+          "range": "0.0 to 3.0"
+        },
+        {
+          "label": "Speed Limit",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Timer",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.01 to 10.0"
+        },
+        {
+          "label": "In Liquids",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "When Sneaking",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Only On Ground",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/SpeedModule.java"
+    },
+    {
+      "id": "spider",
+      "name": "Spider",
+      "description": "Allows you to climb walls like a spider.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Climb Speed",
+          "type": "Number",
+          "default": "0.2",
+          "range": "0.0 to 10.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/SpiderModule.java"
+    },
+    {
+      "id": "sprint",
+      "name": "Sprint",
+      "description": "Automatically sprints.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Sprint Mode",
+          "type": "Mode",
+          "default": "Strict",
+          "options": [
+            "Strict",
+            "Rage"
+          ]
+        },
+        {
+          "label": "Keep Sprint",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Unsprint On Hit",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Unsprint In Water",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Sprint While Stationary",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/SprintModule.java"
+    },
+    {
+      "id": "no-jump-delay",
+      "name": "No Jump Delay",
+      "description": "Removes the delay between jumps.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Cooldown",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 9.0"
+        },
+        {
+          "label": "Variance",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 4.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/NoJumpDelayModule.java"
+    },
+    {
+      "id": "trident-boost",
+      "name": "Trident Boost",
+      "description": "Boosts you when using riptide with a trident.",
+      "category": "Movement",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Boost",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.1 to 10.0"
+        },
+        {
+          "label": "Out Of Water",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/movement/TridentBoostModule.java"
+    },
+    {
+      "id": "slow-swing",
+      "name": "Slow Swing",
+      "description": "Control hand swing animation speed.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "0.25",
+          "range": "0.1 to 2.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/SlowSwingModule.java"
+    },
+    {
+      "id": "swing-animation",
+      "name": "Swing Animation",
+      "description": "Changes your first-person swing animation.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Slash",
+          "options": [
+            "Slash",
+            "Chop",
+            "Hook",
+            "Spin",
+            "Double Tap",
+            "Push"
+          ]
+        },
+        {
+          "label": "Tempo",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.4 to 2.5"
+        },
+        {
+          "label": "Intensity",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.2 to 2.0"
+        },
+        {
+          "label": "Offhand Too",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Combat Only",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/SwingAnimationModule.java"
+    },
+    {
+      "id": "hand-pose",
+      "name": "Hand Pose",
+      "description": "Moves, rotates and resizes your first-person hands.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Link Hands",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Editing",
+          "type": "Mode",
+          "default": "Main Hand",
+          "options": [
+            "Main Hand",
+            "Offhand"
+          ]
+        },
+        {
+          "label": "Glide",
+          "type": "Number",
+          "default": "0.4",
+          "range": "0.0 to 1.0"
+        },
+        {
+          "label": "Reset Hand",
+          "type": "Action"
+        },
+        {
+          "label": "Offset X",
+          "type": "Number"
+        },
+        {
+          "label": "Offset Y",
+          "type": "Number"
+        },
+        {
+          "label": "Offset Z",
+          "type": "Number"
+        },
+        {
+          "label": "Pitch",
+          "type": "Number"
+        },
+        {
+          "label": "Yaw",
+          "type": "Number"
+        },
+        {
+          "label": "Roll",
+          "type": "Number"
+        },
+        {
+          "label": "Scale",
+          "type": "Number"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/HandsModule.java"
+    },
+    {
+      "id": "hand-aura",
+      "name": "Hand Aura",
+      "description": "Adds a glowing outline to your hand and held item.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Glow Color",
+          "type": "Color"
+        },
+        {
+          "label": "Aura",
+          "type": "Number",
+          "default": "65.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Reach",
+          "type": "Number",
+          "default": "8.0",
+          "range": "2.0 to 20.0"
+        },
+        {
+          "label": "Rim",
+          "type": "Number",
+          "default": "40.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Sheen",
+          "type": "Number",
+          "default": "25.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Sheen Color",
+          "type": "Color"
+        },
+        {
+          "label": "Breathe",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/HandAuraModule.java"
+    },
+    {
+      "id": "skin-change",
+      "name": "Skin Change",
+      "description": "Wear any player's skin client-side.",
+      "category": "Misc",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Self Player",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Others Player",
+          "type": "String",
+          "default": ""
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/SkinChangeModule.java"
+    },
+    {
+      "id": "spawner-notifier",
+      "name": "Spawner Notifier",
+      "description": "Scans chunks for mob spawners and highlights them.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Sound",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Render",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/SpawnerNotifierModule.java"
+    },
+    {
+      "id": "sus-chunk-finder",
+      "name": "Sus Chunk Finder",
+      "description": "Colored object outlines for containers, machines, redstone and base clues. Look at a group for an inventory-style breakdown. Amethyst and growth clues are not proof of a base.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Method",
+          "type": "Mode",
+          "default": "Classic",
+          "options": [
+            "Classic",
+            "ANBS+ Scan",
+            "Activity clues"
+          ]
+        },
+        {
+          "label": "Bee clue points",
+          "type": "Number",
+          "default": "2",
+          "range": "1 to 8"
+        },
+        {
+          "label": "Include short / immature growth",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Minimum kelp length",
+          "type": "Number",
+          "default": "16",
+          "range": "2 to 64"
+        },
+        {
+          "label": "Minimum vine length",
+          "type": "Number",
+          "default": "16",
+          "range": "2 to 64"
+        },
+        {
+          "label": "Minimum cave vine length",
+          "type": "Number",
+          "default": "20",
+          "range": "2 to 64"
+        },
+        {
+          "label": "Minimum bamboo height",
+          "type": "Number",
+          "default": "14",
+          "range": "2 to 32"
+        },
+        {
+          "label": "Minimum mature crystals",
+          "type": "Number",
+          "default": "12",
+          "range": "2 to 128"
+        },
+        {
+          "label": "Minimum mature crystal %",
+          "type": "Number",
+          "default": "75",
+          "range": "10 to 100"
+        },
+        {
+          "label": "Simulation Distance",
+          "type": "Number",
+          "default": "5.0",
+          "range": "2.0 to 16.0"
+        },
+        {
+          "label": "Sensitivity",
+          "type": "Number",
+          "default": "6.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Object / inspect range",
+          "type": "Number",
+          "default": "128",
+          "range": "16 to 256"
+        },
+        {
+          "label": "Look-to-inspect panel",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/SusChunkFinderModule.java"
+    },
+    {
+      "id": "chunk-scanner",
+      "name": "Chunk Scanner",
+      "description": "Marks suspicious chunks with signs of player activity.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Advanced Scanner",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Seed",
+          "type": "String",
+          "default": ""
+        },
+        {
+          "label": "Sensitivity",
+          "type": "Number",
+          "default": "2.0",
+          "range": "2.0 to 5.0"
+        },
+        {
+          "label": "Spread Radius",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 16.0"
+        },
+        {
+          "label": "Chunk Color",
+          "type": "Color"
+        },
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Sound",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/ChunkScannerModule.java"
+    },
+    {
+      "id": "prime-chunk-finder",
+      "name": "Prime Chunk Finder",
+      "description": "Flags chunks with light and redstone changes below Y 0.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Chunk Color",
+          "type": "Color"
+        },
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Sound",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/PrimeChunkFinderModule.java"
+    },
+    {
+      "id": "block-entity-debug",
+      "name": "Block Entity Debug",
+      "description": "Renders every leaked block entity as ESP (always-on Netty capture).",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Detection",
+          "type": "Mode",
+          "default": "All",
+          "options": [
+            "All",
+            "Below Zero",
+            "Below -20",
+            "Below -30"
+          ]
+        },
+        {
+          "label": "Block Filter",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Custom Tracer Color",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Tracer Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/BlockEntityDebugModule.java"
+    },
+    {
+      "id": "light-debug",
+      "name": "Light Debug",
+      "description": "Highlights artificial light underground.",
+      "category": "Base Raid",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Render Radius",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 16.0"
+        },
+        {
+          "label": "Min Light",
+          "type": "Number",
+          "default": "5.0",
+          "range": "1.0 to 15.0"
+        },
+        {
+          "label": "Denoise",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/LightEspModule.java"
+    },
+    {
+      "id": "fullbright",
+      "name": "Fullbright",
+      "description": "Brighten dark areas by overriding the client lightmap gamma.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Gamma",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 16.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/FullbrightModule.java"
+    },
+    {
+      "id": "esp",
+      "name": "ESP",
+      "description": "Highlights players, hostile and passive mobs with outlines, boxes and tracers.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Players",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hostile Mobs",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Passive Mobs",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Ignore Self",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Box",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Custom Tracer Color",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Tracer Color",
+          "type": "Color"
+        },
+        {
+          "label": "Shape",
+          "type": "Mode",
+          "default": "Glow",
+          "options": [
+            "Glow",
+            "Box",
+            "Fill",
+            "Both"
+          ]
+        },
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "96.0",
+          "range": "16.0 to 256.0"
+        },
+        {
+          "label": "Max Entities",
+          "type": "Number",
+          "default": "48.0",
+          "range": "8.0 to 96.0"
+        },
+        {
+          "label": "Player Color",
+          "type": "Color"
+        },
+        {
+          "label": "Highlight Friends",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Friend Color",
+          "type": "Color"
+        },
+        {
+          "label": "Hostile Color",
+          "type": "Color"
+        },
+        {
+          "label": "Passive Color",
+          "type": "Color"
+        },
+        {
+          "label": "Fill Alpha",
+          "type": "Number",
+          "default": "0.3",
+          "range": "0.0 to 1.0"
+        },
+        {
+          "label": "Line Width",
+          "type": "Number",
+          "default": "1.5",
+          "range": "0.5 to 5.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/EspModule.java"
+    },
+    {
+      "id": "glow-esp",
+      "name": "Glow ESP",
+      "description": "Outlines entities through walls with a glow.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Players",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Passives",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Items",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Crystals",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Mark Target",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Player Color",
+          "type": "Color"
+        },
+        {
+          "label": "Friend Color",
+          "type": "Color"
+        },
+        {
+          "label": "Passive Color",
+          "type": "Color"
+        },
+        {
+          "label": "Item Color",
+          "type": "Color"
+        },
+        {
+          "label": "Crystal Color",
+          "type": "Color"
+        },
+        {
+          "label": "Target Color",
+          "type": "Color"
+        },
+        {
+          "label": "Stroke",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.5 to 6.0"
+        },
+        {
+          "label": "Aura",
+          "type": "Number",
+          "default": "55.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Aura Reach",
+          "type": "Number",
+          "default": "10.0",
+          "range": "3.0 to 24.0"
+        },
+        {
+          "label": "Fill",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 60.0"
+        },
+        {
+          "label": "Sheen",
+          "type": "Number",
+          "default": "30.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Sheen Color",
+          "type": "Color"
+        },
+        {
+          "label": "Breathe",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Distance",
+          "type": "Number",
+          "default": "64.0",
+          "range": "8.0 to 192.0"
+        },
+        {
+          "label": "Limit",
+          "type": "Number",
+          "default": "48.0",
+          "range": "4.0 to 96.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/ShaderEspModule.java"
+    },
+    {
+      "id": "nametags",
+      "name": "Nametags",
+      "description": "Player nametags with held items, armour, health, ping and distance.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Ping",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Held Items",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Armor",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Durability",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Health",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hide Vanilla",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Dropped Items",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "128.0",
+          "range": "8.0 to 512.0"
+        },
+        {
+          "label": "Max Tags",
+          "type": "Number",
+          "default": "64.0",
+          "range": "1.0 to 64.0"
+        },
+        {
+          "label": "Scale",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.5 to 2.0"
+        },
+        {
+          "label": "Min Scale",
+          "type": "Number",
+          "default": "0.55",
+          "range": "0.3 to 1.0"
+        },
+        {
+          "label": "Background Alpha",
+          "type": "Number",
+          "default": "0.45",
+          "range": "0.0 to 1.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/NametagsModule.java"
+    },
+    {
+      "id": "spawner-nametags",
+      "name": "Spawner Nametags",
+      "description": "Shows each spawner's mob and activation range over the block.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "64.0",
+          "range": "8.0 to 256.0"
+        },
+        {
+          "label": "Activation Radius",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/SpawnerNametagsModule.java"
+    },
+    {
+      "id": "block-esp",
+      "name": "Block ESP",
+      "description": "Highlights chosen blocks; touching blocks merge into one shape.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/BlockEspModule.java"
+    },
+    {
+      "id": "block-overlay",
+      "name": "Block Overlay",
+      "description": "A smooth, animated outline and fill on the block you look at.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Both",
+          "options": [
+            "Both",
+            "Outline",
+            "Fill"
+          ]
+        },
+        {
+          "label": "Color Mode",
+          "type": "Mode",
+          "default": "Gradient",
+          "options": [
+            "Gradient",
+            "Solid",
+            "Rainbow"
+          ]
+        },
+        {
+          "label": "Color",
+          "type": "Color"
+        },
+        {
+          "label": "Second Color",
+          "type": "Color"
+        },
+        {
+          "label": "Flow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Fill Opacity",
+          "type": "Number",
+          "default": "20.0",
+          "range": "2.0 to 60.0"
+        },
+        {
+          "label": "Width",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 5.0"
+        },
+        {
+          "label": "Glow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Smooth",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Smooth Speed",
+          "type": "Number",
+          "default": "16.0",
+          "range": "4.0 to 40.0"
+        },
+        {
+          "label": "Mining Progress",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Face Only",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "See Through",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/BlockOverlayModule.java"
+    },
+    {
+      "id": "storage-esp",
+      "name": "Storage ESP",
+      "description": "Highlights storage blocks and spawners with per-type colours.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/StorageEspModule.java"
+    },
+    {
+      "id": "freelook",
+      "name": "Freelook",
+      "description": "Turns the camera and the player separately.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Mode",
+          "type": "Mode",
+          "default": "Player",
+          "options": [
+            "Player",
+            "Camera"
+          ]
+        },
+        {
+          "label": "Toggle Perspective",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Camera Sensitivity",
+          "type": "Number",
+          "default": "8.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Arrows Control Opposite",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Arrow Speed",
+          "type": "Number",
+          "default": "4.0",
+          "range": "0.0 to 10.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/FreelookModule.java"
+    },
+    {
+      "id": "hole-esp",
+      "name": "Hole ESP",
+      "description": "Highlights holes, tunnels, and staircases.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Detection",
+          "type": "Mode",
+          "default": "Holes",
+          "options": [
+            "Holes",
+            "All",
+            "Holes + Tunnels",
+            "Holes + Stairs",
+            "Tunnels + Stairs",
+            "Tunnels",
+            "Stairs"
+          ]
+        },
+        {
+          "label": "Scan Radius",
+          "type": "Number",
+          "default": "8.0",
+          "range": "1.0 to 24.0"
+        },
+        {
+          "label": "Chunks/Tick",
+          "type": "Number",
+          "default": "64.0",
+          "range": "1.0 to 100.0"
+        },
+        {
+          "label": "Scan Budget ms",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Only Air Blocks",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Min Y Offset",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 319.0"
+        },
+        {
+          "label": "Max Y Offset",
+          "type": "Number",
+          "default": "0.0",
+          "range": "0.0 to 319.0"
+        },
+        {
+          "label": "Min Hole Depth",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Min Tunnel Length",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Min Tunnel Height",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 10.0"
+        },
+        {
+          "label": "Max Tunnel Height",
+          "type": "Number",
+          "default": "3.0",
+          "range": "2.0 to 10.0"
+        },
+        {
+          "label": "Min Stair Length",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Min Stair Height",
+          "type": "Number",
+          "default": "3.0",
+          "range": "2.0 to 10.0"
+        },
+        {
+          "label": "Max Stair Height",
+          "type": "Number",
+          "default": "5.0",
+          "range": "2.0 to 10.0"
+        },
+        {
+          "label": "Fill",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Outline",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Line Width",
+          "type": "Number",
+          "default": "1.5",
+          "range": "0.5 to 5.0"
+        },
+        {
+          "label": "1x1 Line",
+          "type": "Color"
+        },
+        {
+          "label": "1x1 Fill",
+          "type": "Color"
+        },
+        {
+          "label": "3x1 Line",
+          "type": "Color"
+        },
+        {
+          "label": "3x1 Fill",
+          "type": "Color"
+        },
+        {
+          "label": "Tunnel Line",
+          "type": "Color"
+        },
+        {
+          "label": "Tunnel Fill",
+          "type": "Color"
+        },
+        {
+          "label": "Stair Line",
+          "type": "Color"
+        },
+        {
+          "label": "Stair Fill",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/HoleEspModule.java"
+    },
+    {
+      "id": "pearl-trajectory",
+      "name": "Pearl Trajectory",
+      "description": "Predicts where a held pearl lands and previews the flight of thrown pearls.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Predict",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Trail",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Others' Pearls",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Landing",
+          "type": "Mode",
+          "default": "Ring",
+          "options": [
+            "Ring",
+            "Box",
+            "None"
+          ]
+        },
+        {
+          "label": "Landing Info",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Glow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Gradient",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Color"
+        },
+        {
+          "label": "End Color",
+          "type": "Color"
+        },
+        {
+          "label": "Hit Color",
+          "type": "Color"
+        },
+        {
+          "label": "Line Width",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.5 to 5.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/PearlTrajectoryModule.java"
+    },
+    {
+      "id": "trajectories",
+      "name": "Trajectories",
+      "description": "Shows where your projectiles will land.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Aim Preview",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Ghost Arc",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "In Flight",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Others' Shots",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "64.0",
+          "range": "16.0 to 160.0"
+        },
+        {
+          "label": "Bows & Crossbows",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Tridents",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Throwables",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Ender Pearls",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Path",
+          "type": "Mode",
+          "default": "Beads",
+          "options": [
+            "Beads",
+            "Dashes",
+            "Solid"
+          ]
+        },
+        {
+          "label": "Flow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Path Color",
+          "type": "Color"
+        },
+        {
+          "label": "Thickness",
+          "type": "Number",
+          "default": "2.25",
+          "range": "0.5 to 5.0"
+        },
+        {
+          "label": "Halo",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Through Walls",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Marker",
+          "type": "Mode",
+          "default": "Ankh",
+          "options": [
+            "Ankh",
+            "Sun Disk",
+            "None"
+          ]
+        },
+        {
+          "label": "Marker Scale",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.5 to 2.0"
+        },
+        {
+          "label": "Target Box",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Hit Color",
+          "type": "Color"
+        },
+        {
+          "label": "Flight Time",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/TrajectoriesModule.java"
+    },
+    {
+      "id": "item-esp",
+      "name": "Item ESP",
+      "description": "Highlights selected dropped items with model outlines and tracers.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "128.0",
+          "range": "10.0 to 512.0"
+        },
+        {
+          "label": "Outline",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Tracers",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/ItemEspModule.java"
+    },
+    {
+      "id": "xray",
+      "name": "Xray",
+      "description": "Hide or fade everything but a block whitelist to see ores through terrain.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Opacity",
+          "type": "Number",
+          "default": "10.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Exposed Only",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/XrayModule.java"
+    },
+    {
+      "id": "no-render",
+      "name": "No Render",
+      "description": "Hide selected overlays, screen effects and entity renders.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Fire Overlay",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Totem Animation",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Pumpkin & Powder Snow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Nausea & Portal",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Blindness & Darkness",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Spawner Mob",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Falling Blocks",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Weather",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lava Fog",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Entity Fire",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/NoRenderModule.java"
+    },
+    {
+      "id": "custom-fov",
+      "name": "Custom Fov",
+      "description": "Changes your field of view (FOV).",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "FOV",
+          "type": "Number",
+          "default": "110.0",
+          "range": "30.0 to 160.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/CustomFovModule.java"
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom",
+      "description": "Hold the key to zoom in.",
+      "category": "Visuals",
+      "action": false,
+      "hold": true,
+      "key": "C",
+      "settings": [
+        {
+          "label": "Zoom",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.5 to 20.0"
+        },
+        {
+          "label": "Smoothness",
+          "type": "Number",
+          "default": "60.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Scroll",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lower Sensitivity",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Cinematic Camera",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/ZoomModule.java"
+    },
+    {
+      "id": "custom-crosshair",
+      "name": "Custom Crosshair",
+      "description": "Draws a configurable crosshair in place of the vanilla one.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Cross",
+          "options": [
+            "Cross",
+            "T",
+            "X",
+            "Dot",
+            "Circle"
+          ]
+        },
+        {
+          "label": "Size",
+          "type": "Number",
+          "default": "6.0",
+          "range": "1.0 to 20.0"
+        },
+        {
+          "label": "Gap",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 16.0"
+        },
+        {
+          "label": "Thickness",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 5.0"
+        },
+        {
+          "label": "Center Dot",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Outline",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Custom",
+          "options": [
+            "Custom",
+            "Accent"
+          ]
+        },
+        {
+          "label": "Custom Color",
+          "type": "Color"
+        },
+        {
+          "label": "Target Tint",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Target Color",
+          "type": "Color"
+        },
+        {
+          "label": "Dynamic Gap",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Spread",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.0 to 12.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/CustomCrosshairModule.java"
+    },
+    {
+      "id": "custom-glint",
+      "name": "Custom Glint",
+      "description": "Recolours the enchantment glint and changes its speed and pattern size.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Custom",
+          "options": [
+            "Custom",
+            "Accent"
+          ]
+        },
+        {
+          "label": "Item Color",
+          "type": "Color"
+        },
+        {
+          "label": "Separate Armor",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Armor Color",
+          "type": "Color"
+        },
+        {
+          "label": "Intensity",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.05 to 1.0"
+        },
+        {
+          "label": "Speed",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.1 to 4.0"
+        },
+        {
+          "label": "Pattern Size",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.25 to 4.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/CustomGlintModule.java"
+    },
+    {
+      "id": "hit-particles",
+      "name": "Hit Particles",
+      "description": "Spawns particles where your hits land.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Type",
+          "type": "Mode",
+          "default": "Crit",
+          "options": [
+            "Crit",
+            "Magic Crit",
+            "Spark",
+            "Flame",
+            "Soul Flame",
+            "End Rod",
+            "Totem",
+            "Heart",
+            "Dust"
+          ]
+        },
+        {
+          "label": "Amount",
+          "type": "Number",
+          "default": "10.0",
+          "range": "1.0 to 40.0"
+        },
+        {
+          "label": "Spread",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.25 to 3.0"
+        },
+        {
+          "label": "Origin",
+          "type": "Mode",
+          "default": "Impact",
+          "options": [
+            "Impact",
+            "Body"
+          ]
+        },
+        {
+          "label": "Only Crits",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Targets",
+          "type": "Mode",
+          "default": "Living",
+          "options": [
+            "Living",
+            "Players",
+            "All"
+          ]
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Accent",
+          "options": [
+            "Custom",
+            "Accent"
+          ]
+        },
+        {
+          "label": "Custom Color",
+          "type": "Color"
+        },
+        {
+          "label": "Dust Size",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.5 to 2.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/HitParticlesModule.java"
+    },
+    {
+      "id": "target-esp",
+      "name": "Target ESP",
+      "description": "Draws an Egyptian mark on your combat target.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Ankh Circle",
+          "options": [
+            "Ankh Circle",
+            "Horus Halo",
+            "Sand Vortex",
+            "Capstone"
+          ]
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Main Color",
+          "type": "Color"
+        },
+        {
+          "label": "Second Color",
+          "type": "Color"
+        },
+        {
+          "label": "Hit Color",
+          "type": "Color"
+        },
+        {
+          "label": "Scale",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.6 to 1.8"
+        },
+        {
+          "label": "Tempo",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.3 to 2.4"
+        },
+        {
+          "label": "Opacity",
+          "type": "Number",
+          "default": "0.9",
+          "range": "0.2 to 1.0"
+        },
+        {
+          "label": "Memory",
+          "type": "Number",
+          "default": "4.0",
+          "range": "0.5 to 15.0"
+        },
+        {
+          "label": "Crosshair Pick",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Players Only",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Hit Flash",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Through Walls",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/TargetEspModule.java"
+    },
+    {
+      "id": "totem-spirit",
+      "name": "Totem Spirit",
+      "description": "A glowing ghost rises when a player pops a totem.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Ka Time",
+          "type": "Number",
+          "default": "2.4",
+          "range": "0.6 to 6.0"
+        },
+        {
+          "label": "Ascent",
+          "type": "Number",
+          "default": "1.6",
+          "range": "0.0 to 4.0"
+        },
+        {
+          "label": "Look",
+          "type": "Mode",
+          "default": "Glass",
+          "options": [
+            "Glass",
+            "Wire"
+          ]
+        },
+        {
+          "label": "Opacity",
+          "type": "Number",
+          "default": "0.65",
+          "range": "0.15 to 1.0"
+        },
+        {
+          "label": "Ka Pose",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Ankh Crest",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Ground Seal",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Own Pops",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Through Walls",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Body Color",
+          "type": "Color"
+        },
+        {
+          "label": "Aura Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/TotemSpiritModule.java"
+    },
+    {
+      "id": "particles",
+      "name": "Particles",
+      "description": "Spectral ghost and stardust particles for totem pops, projectiles and footsteps.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Totem Pops",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Pop Glyph",
+          "type": "Mode",
+          "default": "Mixed",
+          "options": [
+            "Mixed",
+            "Ghost",
+            "Crescent",
+            "Stardust",
+            "Spark"
+          ]
+        },
+        {
+          "label": "Pop Burst",
+          "type": "Number",
+          "default": "26.0",
+          "range": "4.0 to 80.0"
+        },
+        {
+          "label": "Own Pops",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Projectiles",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Pearls",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Arrows",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Tridents",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Trail Glyph",
+          "type": "Mode",
+          "default": "Spark",
+          "options": [
+            "Spark",
+            "Stardust",
+            "Ghost",
+            "Crescent",
+            "Mixed"
+          ]
+        },
+        {
+          "label": "Trail Density",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 6.0"
+        },
+        {
+          "label": "Footsteps",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Step Glyph",
+          "type": "Mode",
+          "default": "Stardust",
+          "options": [
+            "Stardust",
+            "Spark",
+            "Ghost",
+            "Crescent",
+            "Mixed"
+          ]
+        },
+        {
+          "label": "Step Density",
+          "type": "Number",
+          "default": "2.0",
+          "range": "1.0 to 6.0"
+        },
+        {
+          "label": "Size",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.3 to 2.5"
+        },
+        {
+          "label": "Lifetime",
+          "type": "Number",
+          "default": "1.4",
+          "range": "0.3 to 4.0"
+        },
+        {
+          "label": "Limit",
+          "type": "Number",
+          "default": "240.0",
+          "range": "40.0 to CAPACITY"
+        },
+        {
+          "label": "Halo",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Main Color",
+          "type": "Color"
+        },
+        {
+          "label": "Second Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/RelicParticlesModule.java"
+    },
+    {
+      "id": "motion-blur",
+      "name": "Motion Blur",
+      "description": "Adds motion blur when you turn.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Strength",
+          "type": "Number",
+          "default": "50.0",
+          "range": "10.0 to 90.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/MotionBlurModule.java"
+    },
+    {
+      "id": "atmosphere",
+      "name": "Spectre Sky",
+      "description": "GUI-matched nebulae and auroras, a ghost moon, shooting stars, satellites and UFO sightings.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Sky palette",
+          "type": "Mode",
+          "default": "Follow GUI",
+          "options": [
+            "Follow GUI",
+            "Default",
+            "Midnight",
+            "Rose",
+            "Mint",
+            "Amber",
+            "Mono",
+            "Teal Nebula",
+            "Violet Aurora",
+            "Borealis",
+            "Nebula",
+            "Spectre",
+            "Frost",
+            "Crimson",
+            "Custom"
+          ]
+        },
+        {
+          "label": "Sky style",
+          "type": "Mode",
+          "default": "Nebula",
+          "options": [
+            "Nebula",
+            "Aurora",
+            "Both"
+          ]
+        },
+        {
+          "label": "Satellites",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "UFO sightings",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Sky object density",
+          "type": "Number",
+          "default": "1",
+          "range": "1 to 4"
+        },
+        {
+          "label": "Ghost moon",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Spectral sun",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Sun corona",
+          "type": "Number",
+          "default": ".8",
+          "range": "0 to 1"
+        },
+        {
+          "label": "Ghost moon glow",
+          "type": "Number",
+          "default": ".6",
+          "range": "0 to 1"
+        },
+        {
+          "label": "Always night sky",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Night Sky Color",
+          "type": "Color"
+        },
+        {
+          "label": "Sunset Color",
+          "type": "Color"
+        },
+        {
+          "label": "Aurora Color",
+          "type": "Color"
+        },
+        {
+          "label": "Aurora Top Color",
+          "type": "Color"
+        },
+        {
+          "label": "Gradient Sky",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Keep In Rain",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Sun & Moon Glow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Stars",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Star Brightness",
+          "type": "Number",
+          "default": "1.3",
+          "range": "0.5 to 2.0"
+        },
+        {
+          "label": "Milky Way",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Milky Way Brightness",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.2 to 2.0"
+        },
+        {
+          "label": "Shooting Stars",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Aurora",
+          "type": "Mode",
+          "default": "Always",
+          "options": [
+            "Always",
+            "Cold Biomes",
+            "Off"
+          ]
+        },
+        {
+          "label": "Aurora Brightness",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.2 to 2.0"
+        },
+        {
+          "label": "Aurora Speed",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.2 to 3.0"
+        },
+        {
+          "label": "Cloud Colors",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "End Sky",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Nether Colors",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/AtmosphereModule.java"
+    },
+    {
+      "id": "color-grading",
+      "name": "Color Grading",
+      "description": "Adds color, contrast and a vignette to the world.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Vibrance",
+          "type": "Number",
+          "default": "35.0",
+          "range": "0.0 to 100.0"
+        },
+        {
+          "label": "Contrast",
+          "type": "Number",
+          "default": "8.0",
+          "range": "-20.0 to 40.0"
+        },
+        {
+          "label": "Brightness",
+          "type": "Number",
+          "default": "3.0",
+          "range": "-20.0 to 30.0"
+        },
+        {
+          "label": "Warmth",
+          "type": "Number",
+          "default": "15.0",
+          "range": "-100.0 to 100.0"
+        },
+        {
+          "label": "Vignette",
+          "type": "Number",
+          "default": "30.0",
+          "range": "0.0 to 100.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/ColorGradingModule.java"
+    },
+    {
+      "id": "jump-circles",
+      "name": "Jump Circles",
+      "description": "Draws a fading Spectre ring where you jump.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Accent",
+          "options": [
+            "Accent",
+            "Custom"
+          ]
+        },
+        {
+          "label": "Custom Color",
+          "type": "Color"
+        },
+        {
+          "label": "Size",
+          "type": "Number",
+          "default": "1.2",
+          "range": "0.5 to 3.0"
+        },
+        {
+          "label": "Duration",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.3 to 3.0"
+        },
+        {
+          "label": "Logo",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Others",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/JumpCirclesModule.java"
+    },
+    {
+      "id": "pharaoh-headdress",
+      "name": "Spectral Hood",
+      "description": "A ghost hood, wraith cowl or spectral halo for your player model.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Ghost Hood",
+          "options": [
+            "Ghost Hood",
+            "Wraith",
+            "Spectral Halo"
+          ]
+        },
+        {
+          "label": "Cloth Detail",
+          "type": "Number",
+          "default": "5.0",
+          "range": "3.0 to 9.0"
+        },
+        {
+          "label": "Spectral Pendant",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Size",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.8 to 1.3"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Cloth Color",
+          "type": "Color"
+        },
+        {
+          "label": "Inlay Color",
+          "type": "Color"
+        },
+        {
+          "label": "Eye Color",
+          "type": "Color"
+        },
+        {
+          "label": "Eye Glow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Glint",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "On Friends",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/SpectralHoodModule.java"
+    },
+    {
+      "id": "character-3d",
+      "name": "3D Character",
+      "description": "Replaces your player model with a 3D character.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "On Friends",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Detail",
+          "type": "Mode",
+          "options": []
+        },
+        {
+          "label": "Held Items",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Open Characters Folder",
+          "type": "Action"
+        },
+        {
+          "label": "Character",
+          "type": "Mode",
+          "options": []
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/character/CharacterModule.java"
+    },
+    {
+      "id": "floating-relics",
+      "name": "Spectral Wisps",
+      "description": "Ghosts, stars, moons and wisps drift around your player.",
+      "category": "Visuals",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Symbols",
+          "type": "Mode",
+          "default": "Mixed",
+          "options": [
+            "Mixed",
+            "Ghost",
+            "Star",
+            "Crescent",
+            "Wisp",
+            "Crystal",
+            "Orbit"
+          ]
+        },
+        {
+          "label": "Count",
+          "type": "Number",
+          "default": "9.0",
+          "range": "1.0 to 32.0"
+        },
+        {
+          "label": "Size",
+          "type": "Number",
+          "default": "0.3",
+          "range": "0.15 to 0.75"
+        },
+        {
+          "label": "Spread",
+          "type": "Number",
+          "default": "2.6",
+          "range": "1.2 to 6.0"
+        },
+        {
+          "label": "Bounce",
+          "type": "Number",
+          "default": "0.6",
+          "range": "0.1 to 0.95"
+        },
+        {
+          "label": "Drift",
+          "type": "Number",
+          "default": "0.5",
+          "range": "0.0 to 2.5"
+        },
+        {
+          "label": "Spin",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.2 to 3.0"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Main Color",
+          "type": "Color"
+        },
+        {
+          "label": "Second Color",
+          "type": "Color"
+        },
+        {
+          "label": "Halo",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Block Bounce",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/FloatingRelicsModule.java"
+    },
+    {
+      "id": "time-changer",
+      "name": "Time Changer",
+      "description": "Makes you able to set a custom time.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Time",
+          "type": "Number",
+          "default": "0",
+          "range": "-20000 to 20000"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/TimeChangerModule.java"
+    },
+    {
+      "id": "low-health-warning",
+      "name": "Low Health Warning",
+      "description": "Flashes the screen edges when your health is low.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Warn Below",
+          "type": "Number",
+          "default": "7.0",
+          "range": "2.0 to 20.0"
+        },
+        {
+          "label": "Count Absorption",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Pulse",
+          "type": "Mode",
+          "default": "Heartbeat",
+          "options": [
+            "Heartbeat",
+            "Breath",
+            "Steady"
+          ]
+        },
+        {
+          "label": "Intensity",
+          "type": "Number",
+          "default": "0.7",
+          "range": "0.2 to 1.0"
+        },
+        {
+          "label": "Reach",
+          "type": "Number",
+          "default": "0.16",
+          "range": "0.06 to 0.35"
+        },
+        {
+          "label": "Edge Line",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Color",
+          "type": "Mode",
+          "default": "Theme",
+          "options": [
+            "Theme",
+            "Manual"
+          ]
+        },
+        {
+          "label": "Glow Color",
+          "type": "Color"
+        },
+        {
+          "label": "Edge Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/LowHealthWarningModule.java"
+    },
+    {
+      "id": "hud",
+      "name": "HUD",
+      "description": "Module list, coordinates and status overlays.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "HUD Bar Mascot",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Overworld Coords",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Nether Coords",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Ping",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "FPS",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Clock",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Logo",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Module List",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Potions",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Target HUD",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Players Only",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Show On Look",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Show Gear",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Armor HUD",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Armor Layout",
+          "type": "Mode",
+          "default": "Row",
+          "options": [
+            "Row",
+            "Column"
+          ]
+        },
+        {
+          "label": "Wear As",
+          "type": "Mode",
+          "default": "Gauge",
+          "options": [
+            "Gauge",
+            "Percent",
+            "Gauge + Percent"
+          ]
+        },
+        {
+          "label": "Include Hands",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Cooldown",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Cooldown Dial",
+          "type": "Mode",
+          "default": "Halo",
+          "options": [
+            "Halo",
+            "Sandbar"
+          ]
+        },
+        {
+          "label": "Toast Style",
+          "type": "Mode",
+          "default": "Bar",
+          "options": [
+            "Bar",
+            "Card",
+            "Chip"
+          ]
+        },
+        {
+          "label": "Shadow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Custom Accent",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Accent Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/HudModule.java"
+    },
+    {
+      "id": "spotify-hud",
+      "name": "Media Player",
+      "description": "Watch YouTube and play SoundCloud in-game, with an optional desktop media HUD.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Show Artist",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Album Art",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Progress",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Scroll Long Titles",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Lyrics",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Lyric Lines",
+          "type": "Mode",
+          "default": "2",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "label": "Lyric Motion",
+          "type": "Mode",
+          "default": "Wave",
+          "options": [
+            "Wave",
+            "Glide",
+            "Fade"
+          ]
+        },
+        {
+          "label": "Lyric Highlight",
+          "type": "Mode",
+          "default": "Karaoke",
+          "options": [
+            "Karaoke",
+            "Line",
+            "Off"
+          ]
+        },
+        {
+          "label": "Lyrics Online",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Card Width",
+          "type": "Number",
+          "default": "320.0",
+          "range": "200.0 to 560.0"
+        },
+        {
+          "label": "Title Color",
+          "type": "Color"
+        },
+        {
+          "label": "Artist Color",
+          "type": "Color"
+        },
+        {
+          "label": "Lyrics Color",
+          "type": "Color"
+        },
+        {
+          "label": "Upcoming Lyrics Color",
+          "type": "Color"
+        },
+        {
+          "label": "Highlight Color",
+          "type": "Color"
+        },
+        {
+          "label": "Show When Idle",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Media Keys",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Play / Pause",
+          "type": "Key"
+        },
+        {
+          "label": "Next Track",
+          "type": "Key"
+        },
+        {
+          "label": "Previous Track",
+          "type": "Key"
+        },
+        {
+          "label": "Open player",
+          "type": "Action"
+        },
+        {
+          "label": "Stop player",
+          "type": "Action"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/SpotifyHudModule.java"
+    },
+    {
+      "id": "region-map",
+      "name": "Region Map",
+      "description": "DonutSMP region map with directional indicator.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Cell Size",
+          "type": "Number",
+          "default": "22.0",
+          "range": "10.0 to 50.0"
+        },
+        {
+          "label": "Cell Gap",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Player Scale",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.5 to 3.0"
+        },
+        {
+          "label": "Text Scale",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.1 to 2.0"
+        },
+        {
+          "label": "Opacity",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.1 to 1.0"
+        },
+        {
+          "label": "Shadow",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Region IDs",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Legend",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Show Coordinates",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Player Indicator",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/RegionMapModule.java"
+    },
+    {
+      "id": "hive-map",
+      "name": "Hive Map",
+      "description": "Explore nearby chunks in a 3D map with underground and Y-slice views.",
+      "category": "Spectre Client",
+      "action": true,
+      "hold": false,
+      "key": "H",
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/HiveMapModule.java"
+    },
+    {
+      "id": "radar",
+      "name": "Radar",
+      "description": "A round radar of the players around you.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Range",
+          "type": "Number",
+          "default": "48.0",
+          "range": "8.0 to 256.0"
+        },
+        {
+          "label": "Size",
+          "type": "Number",
+          "default": "150.0",
+          "range": "80.0 to 320.0"
+        },
+        {
+          "label": "Rotate",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Player Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/RadarModule.java"
+    },
+    {
+      "id": "hotkeys",
+      "name": "Hotkeys",
+      "description": "Lists the modules you have bound to a key, and their keys.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/HotkeysModule.java"
+    },
+    {
+      "id": "builder",
+      "name": "Base Builder",
+      "description": "Import a schematic, preview its placement and plan materials and shulker storage.",
+      "category": "Base Builder",
+      "action": true,
+      "hold": false,
+      "key": null,
+      "settings": [],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/BuilderModule.java"
+    },
+    {
+      "id": "tracers",
+      "name": "Tracers",
+      "description": "Displays tracer lines to specified entities.",
+      "category": "Render",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Players",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Animals",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Water Animals",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Monsters",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Ambient",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Misc",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Ignore Self",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Ignore Friends",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Show Invisible",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Style",
+          "type": "Mode",
+          "default": "Lines",
+          "options": [
+            "Lines",
+            "Offscreen"
+          ]
+        },
+        {
+          "label": "Target",
+          "type": "Mode",
+          "default": "Body",
+          "options": [
+            "Head",
+            "Body",
+            "Feet"
+          ]
+        },
+        {
+          "label": "Stem",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Max Distance",
+          "type": "Number",
+          "default": "256.0",
+          "range": "0.0 to 256.0"
+        },
+        {
+          "label": "Distance Offscreen",
+          "type": "Number",
+          "default": "200.0",
+          "range": "0.0 to 500.0"
+        },
+        {
+          "label": "Size Offscreen",
+          "type": "Number",
+          "default": "10.0",
+          "range": "2.0 to 50.0"
+        },
+        {
+          "label": "Blink Offscreen",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Blink Offscreen Speed",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.0 to 15.0"
+        },
+        {
+          "label": "Distance Colors",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Show Friend Colors",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Team Colors",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Friend Color",
+          "type": "Color"
+        },
+        {
+          "label": "Players Color",
+          "type": "Color"
+        },
+        {
+          "label": "Animals Color",
+          "type": "Color"
+        },
+        {
+          "label": "Water Animals Color",
+          "type": "Color"
+        },
+        {
+          "label": "Monsters Color",
+          "type": "Color"
+        },
+        {
+          "label": "Ambient Color",
+          "type": "Color"
+        },
+        {
+          "label": "Misc Color",
+          "type": "Color"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/render/TracersModule.java"
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "description": "Render performance settings.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Frustum Culling",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Scan Budget ms",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.5 to 8.0"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/PerformanceModule.java"
+    },
+    {
+      "id": "discord-presence",
+      "name": "Discord Presence",
+      "description": "Shows Spectre Client and the server you are on in your Discord status.",
+      "category": "Spectre Client",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "Show Server IP",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Discord Button",
+          "type": "Boolean",
+          "default": "On"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/DiscordPresenceModule.java"
+    }
+  ]
+}

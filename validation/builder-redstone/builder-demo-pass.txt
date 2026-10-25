@@ -1,0 +1,20 @@
+Imported actual .schem: 111 blocks
+All six machines built as contiguous local sections; each foundation finished before upper placements; 2015 walking ticks without crouch braking; first two reachable blocks placed without moving from the starting pose
+Every schematic block state verified independently on server, including repeater delay 4, subtract comparator mode, crafter orientation and hopper outlets
+Test input supplied through actual container GUI: Fuel hopper
+Test input supplied through actual container GUI: Input hopper
+Test input supplied through actual container GUI: Crafter grid
+Test input supplied through actual container GUI: Dispenser
+Test input supplied through actual container GUI: Dropper
+Functional ON test passed: Repeater and piston
+Functional OFF test passed: Repeater and piston
+Functional ON test passed: Comparator and sticky piston
+Functional OFF test passed: Comparator and sticky piston
+Functional ON test passed: Crafter
+Functional OFF test passed: Crafter
+Functional ON test passed: Dispenser
+Functional OFF test passed: Dispenser
+Functional ON test passed: Dropper
+Functional OFF test passed: Dropper
+Fuel hopper and input hopper fed furnace; output hopper delivered smelted iron into chest
+Continuous real-time capture. Normal executor timings. No schematic target blocks preplaced.

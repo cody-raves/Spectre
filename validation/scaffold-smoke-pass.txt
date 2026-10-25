@@ -1,0 +1,3 @@
+Missing scaffolding stops cleanly without creating access blocks
+Four isolated 12-high columns (48 blocks) built with shared access (peak 10 scaffolding blocks); highest feet Y -49.95515199870873; exact target states preserved; own supports removed; pre-existing tower untouched
+Two native access towers connected by an elevated span over a five-block gap; every span cell stable; crossed between towers without flight; descended and removed both towers and their cross-supported bridge

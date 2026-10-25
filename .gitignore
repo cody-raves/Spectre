@@ -1,0 +1,31 @@
+.gradle/
+**/build/
+**/.tools/
+**/run/
+.tooling/
+dist/
+*.log
+__pycache__/
+
+# Local reference archives and unrelated projects are not part of Spectre.
+/Spectre-Rebuild/
+/StaffWatch-*/
+/sites/
+/assets/
+/builder-reference/
+/spectre-builder-tests/
+/spectre-preview/
+/VPS-*-HANDOFF.md
+/Spectre_*.png
+/Spectre_*.gif
+/Spectre_*.mp4
+/Spectre_*.csv
+/Spectre_*.html
+
+# Publish only selected verification results, never local recordings/logs by default.
+validation/*
+!validation/scaffold-smoke-pass.txt
+!validation/Render-RedstoneDemo.ps1
+!validation/builder-redstone/
+validation/builder-redstone/*
+!validation/builder-redstone/builder-demo-pass.txt
