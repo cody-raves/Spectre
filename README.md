@@ -61,7 +61,7 @@ python tools/generate-docs.py
 
 ## License and credits
 
-Spectre includes inherited and adapted modules from existing public clients. Many familiar combat, movement, and render features work much as they do in other clients; this catalog is not a claim that every module is original.
+Spectre builds on open-source work and shares its full active source for others to inspect, modify, and build on under the license. It includes inherited and adapted modules from existing public clients. Reuse is part of this model: honor the applicable licenses, preserve required credits, and share source where required. Many familiar combat, movement, and render features work much as they do in other clients; this catalog is not a claim that every module is original.
 
 Our custom work includes Hive Map, the schematic builder and scaffolding workflow, and world-inspection additions for lighting, underground terrain, growth, amethyst, and redstone. These also build on Minecraft and open-source libraries. The current tree does not provide a verified upstream-client attribution for every inherited module; original notices are preserved, and evidence-backed credit corrections are welcome.
 
