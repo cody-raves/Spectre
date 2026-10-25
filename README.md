@@ -2,7 +2,7 @@
 
 A fully open-source Fabric client for **Minecraft 26.2**, with a custom interface, 115 built-in modules, schematic previews and building, world inspection, media playback, and theme-matched skies.
 
-**Created by Cody (cody-raves).** Spectre incorporates and credits reused open-source code; those upstream credits are separate from authorship of the Spectre project.
+**Created by Cody (cody-raves).**
 
 **[Download the JAR](https://github.com/cody-raves/Spectre/releases/latest)** · **[Documentation & module guide](https://cody-raves.github.io/Spectre/)** · **[Report an issue](https://github.com/cody-raves/Spectre/issues)**
 
@@ -61,13 +61,11 @@ The GitHub Pages site is static HTML/CSS/JavaScript in `docs/`. Regenerate its m
 python tools/generate-docs.py
 ```
 
-## License and credits
+## Open source
 
-Spectre builds on open-source work and shares its full active source for others to inspect, modify, and build on under the license. It includes inherited and adapted modules from existing public clients. Reuse is part of this model: honor the applicable licenses, preserve required credits, and share source where required. Many familiar combat, movement, and render features work much as they do in other clients; this catalog is not a claim that every module is original.
+Spectre was created by Cody and builds on existing open-source work. The source is public so others can inspect, modify, and build on it.
 
-Our custom work includes Hive Map, the schematic builder and scaffolding workflow, and world-inspection additions for lighting, underground terrain, growth, amethyst, and redstone. These also build on Minecraft and open-source libraries. The current tree does not provide a verified upstream-client attribution for every inherited module; original notices are preserved, and evidence-backed credit corrections are welcome.
-
-**GPL-3.0-only. Spectre was created by Cody (cody-raves).** Reused code retains its applicable upstream attribution and license notices, including the inherited **4ldenz** credit. That credit does not identify the creator of Spectre. GoNuts-derived portions retain their MIT notice in `Spectre-26.2/src/main/resources/GONUTS-LICENSE.txt`. Bundled dependencies retain their respective licenses.
+**GPL-3.0-only.** Applicable license notices are included with the source. GoNuts-derived portions retain their MIT notice, and dependencies retain their respective licenses.
 
 ## Verify, don’t just trust
 
