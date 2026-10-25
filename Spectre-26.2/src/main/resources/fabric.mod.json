@@ -5,7 +5,10 @@
   "name": "Spectre",
   "description": "Spectre is a standalone client utility mod focused on overlays, quality-of-life tooling, and advanced visual debugging.",
   "authors": [
-    "4ldenz"
+    "cody-raves"
+  ],
+  "contributors": [
+    "4ldenz (inherited code attribution)"
   ],
   "license": "GPL-3.0-only",
   "icon": "assets/spectre/icons/icon_128.png",

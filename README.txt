@@ -3,7 +3,8 @@ Spectre for Minecraft 26.2
 The active Gradle project is exclusively Spectre-26.2. It targets Java 25,
 Fabric Loader 0.19.3 and Fabric API 0.155.2+26.2. Historical reference
 archives in a local workspace are not part of this public active project.
-Original author and GPL attribution remain in the source/resources.
+Spectre was created by Cody (cody-raves). Upstream attribution and GPL
+notices for reused code remain in the source/resources.
 
 SPECTRE GUI AND BRANDING
 Right Shift opens the complete module workspace, with Combat, Misc, Donut,
