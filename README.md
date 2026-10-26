@@ -1,16 +1,20 @@
 # Spectre
 
-A fully open-source Fabric client for **Minecraft 26.2**, with a custom interface, 115 built-in modules, schematic previews and building, world inspection, media playback, and theme-matched skies.
+A fully open-source Fabric client for **Minecraft 26.2**, with a custom interface, 114 built-in modules, schematic previews and building, world inspection, media playback, and theme-matched skies.
 
 **Created by Cody (cody-raves).**
 
 **[Download the JAR](https://github.com/cody-raves/Spectre/releases/latest)** · **[Documentation & module guide](https://cody-raves.github.io/Spectre/)** · **[Report an issue](https://github.com/cody-raves/Spectre/issues)**
 
+## Behavior and security
+
+Read the [behavior report](SECURITY-REPORT.md) for the account-switcher token flow, feature connections, local storage, known weaknesses, and verification limits. Version 0.9.1 removes the Discord invite, Presence integration, and webhook notification features.
+
 ## Install
 
 1. Install **Java 25**, **Minecraft 26.2**, and **Fabric Loader 0.19.3 or later**.
 2. Add **Fabric API 0.155.2+26.2 or later compatible with 26.2** to the instance's `mods` folder.
-3. Download `spectre-0.9.0+mc26.2.jar` from Releases and put it in the same folder. The `-sources.jar` is for developers and is not the installable mod.
+3. Download `spectre-0.9.1+mc26.2.jar` from Releases and put it in the same folder. The `-sources.jar` is for developers and is not the installable mod.
 4. Launch Minecraft and press **Right Shift** to open Spectre. Left-click a module to toggle it or open its tool; right-click for settings.
 
 ## Highlights
@@ -76,7 +80,7 @@ Do not rely only on the maintainer’s claims. Read the source and dependencies,
 Release assets include `SHA256SUMS.txt`. Check your download in PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\spectre-0.9.0+mc26.2.jar
+Get-FileHash -Algorithm SHA256 .\spectre-0.9.1+mc26.2.jar
 ```
 
-Compare it with the published value. To list the archive contents with a JDK, run `jar tf spectre-0.9.0+mc26.2.jar`, or open it with an archive tool. A checksum verifies that the download matches the published artifact, not that the code is safe. Byte-for-byte reproducible builds have not been established; your local rebuild is not promised to have an identical hash.
+Compare it with the published value. To list the archive contents with a JDK, run `jar tf spectre-0.9.1+mc26.2.jar`, or open it with an archive tool. A checksum verifies that the download matches the published artifact, not that the code is safe. Byte-for-byte reproducible builds have not been established; your local rebuild is not promised to have an identical hash.

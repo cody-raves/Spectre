@@ -4,7 +4,6 @@ import imgui.ImDrawList;
 import imgui.ImFont;
 import imgui.ImGui;
 import imgui.ImGuiIO;
-import net.spectre.client.gui.mainmenu.CommunityPopup;
 import net.spectre.client.gui.mainmenu.ConnectionsPanel;
 import net.spectre.client.gui.mainmenu.DuskMenu;
 import net.spectre.client.gui.mainmenu.MenuContext;
@@ -21,7 +20,6 @@ final class MainMenuRenderer {
    private static final Logger LOGGER = LoggerFactory.getLogger("Spectre");
    private static final float NOWHERE = -10000.0F;
    private final MenuContext context;
-   private final CommunityPopup popup = new CommunityPopup();
    private final ConnectionsPanel accounts = new ConnectionsPanel(() -> {});
    private long openedAt = System.nanoTime();
    private boolean failed;
@@ -31,7 +29,7 @@ final class MainMenuRenderer {
    }
 
    boolean keyPressed(int key) {
-      return this.popup.keyPressed(key) || this.accounts.keyPressed(key);
+      return this.accounts.keyPressed(key);
    }
 
    void render() {
@@ -51,8 +49,7 @@ final class MainMenuRenderer {
       float height = io.getDisplaySizeY();
       float scale = ImGuiManager.getInstance().uiScale();
       float dt = Math.max(0.001F, io.getDeltaTime());
-      this.popup.update(t, live);
-      boolean menuPointer = !this.popup.isOpen() && !this.accounts.isOpen();
+      boolean menuPointer = !this.accounts.isOpen();
       this.context
          .begin(
             ImGui.getBackgroundDrawList(),
@@ -83,7 +80,6 @@ final class MainMenuRenderer {
       }
 
       this.accounts.render(width, height, scale, dt);
-      this.popup.render(ImGui.getForegroundDrawList(), width, height, scale, dt, mx, my, click);
    }
 
    private static void drawTooltip(MenuContext c) {

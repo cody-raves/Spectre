@@ -25,7 +25,7 @@ public final class ScaffoldSmokeClient implements ClientModInitializer {
     private boolean usedSupports,climbed;private double maxHeight=Double.NEGATIVE_INFINITY;private int maxSupports;
     private void next(int phase){this.phase=phase;ticks=0;}
     private static void require(boolean condition,String message){if(!condition)throw new AssertionError(message);}
-    public void onInitializeClient(){ThemeStore.get().communityPopup.set(false);ClientTickEvents.END_CLIENT_TICK.register(this::tick);}
+    public void onInitializeClient(){ClientTickEvents.END_CLIENT_TICK.register(this::tick);}
     private void supply(Minecraft mc,boolean scaffold){
         var stone=new ItemStack(Items.STONE,64);mc.player.getInventory().setItem(0,stone);mc.gameMode.handleCreativeModeItemAdd(stone,36);
         var stack=scaffold?new ItemStack(Items.SCAFFOLDING,64):ItemStack.EMPTY;

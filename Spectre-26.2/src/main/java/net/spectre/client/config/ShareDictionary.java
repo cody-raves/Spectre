@@ -6,6 +6,8 @@ import net.fabricmc.api.Environment;
 
 @Environment(EnvType.CLIENT)
 final class ShareDictionary {
+   // Frozen compression dictionary: historical feature names must remain byte-for-byte
+   // compatible with existing share codes. These entries do not enable removed features.
    private static final String[] MODULES = new String[]{
       "aim-assist",
       "air-stuck",

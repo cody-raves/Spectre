@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "spectre",
-  "version": "0.9.0+mc26.2",
+  "version": "0.9.1+mc26.2",
   "name": "Spectre",
   "description": "Spectre is a standalone client utility mod focused on overlays, quality-of-life tooling, and advanced visual debugging.",
   "authors": [

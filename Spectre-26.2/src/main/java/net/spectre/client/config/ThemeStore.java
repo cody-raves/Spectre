@@ -49,7 +49,6 @@ public final class ThemeStore {
    public final BooleanSetting customMainMenu = new BooleanSetting("Custom menus", true);
    public final BooleanSetting customVanillaUi = new BooleanSetting("Custom vanilla UI", true);
    public final BooleanSetting donutNamePrivacy = new BooleanSetting("Scramble my name on Donut", true);
-   public final BooleanSetting communityPopup = new BooleanSetting("Community popup", true);
    public final Surface panels = new Surface("panels", "Panels", false, 0xFF182230, 0.92F, 0.45F);
    public final Surface cards = new Surface("cards", "Cards", true, 0xFF101823, 0.97F, 0.85F);
    public final Surface tabBar = new Surface("tabbar", "Tab bar", false, 0xFF101823, 0.97F, 0.5F);
@@ -73,7 +72,6 @@ public final class ThemeStore {
       all.add(this.customMainMenu);
       all.add(this.customVanillaUi);
       all.add(this.donutNamePrivacy);
-      all.add(this.communityPopup);
       this.settings = List.copyOf(all);
       this.defaults = snapshot(this.settings, true);
       this.customMainMenu.onChange(() -> {

@@ -61,7 +61,7 @@ public final class VanillaUiSmokeClient implements ClientModInitializer {
             phase=210;
         }
     }
-    public void onInitializeClient(){ThemeStore.get().communityPopup.set(false);ThemeStore.get().applyPreset(ThemeStore.PRESETS.getFirst());ThemeStore.get().customVanillaUi.set(true);ClientTickEvents.END_CLIENT_TICK.register(this::tick);}
+    public void onInitializeClient(){ThemeStore.get().applyPreset(ThemeStore.PRESETS.getFirst());ThemeStore.get().customVanillaUi.set(true);ClientTickEvents.END_CLIENT_TICK.register(this::tick);}
     private void require(boolean ok,String label){if(!ok)throw new AssertionError(label);checks.add(label);}
     private void privacyChecks(){
         var key=new UiMotion.Key(1,0,0,100,20);var motion=new UiMotion(0);

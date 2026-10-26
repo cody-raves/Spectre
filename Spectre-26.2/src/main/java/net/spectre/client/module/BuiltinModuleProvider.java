@@ -34,7 +34,6 @@ import net.spectre.client.module.impl.misc.AutoRelogModule;
 import net.spectre.client.module.impl.misc.AutoReplenishModule;
 import net.spectre.client.module.impl.misc.ChatMacroModule;
 import net.spectre.client.module.impl.misc.CoordSnapperModule;
-import net.spectre.client.module.impl.misc.DiscordPresenceModule;
 import net.spectre.client.module.impl.misc.DonutNoFallModule;
 import net.spectre.client.module.impl.misc.FakeStats;
 import net.spectre.client.module.impl.misc.FreecamModule;
@@ -241,8 +240,7 @@ public final class BuiltinModuleProvider implements ModuleProvider {
          new HotkeysModule(),
          new net.spectre.client.module.impl.misc.BuilderModule(),
          new TracersModule(),
-         new PerformanceModule(),
-         new DiscordPresenceModule()
+         new PerformanceModule()
       );
    }
 }

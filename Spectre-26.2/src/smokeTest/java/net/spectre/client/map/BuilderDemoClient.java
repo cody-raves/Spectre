@@ -29,7 +29,7 @@ public final class BuilderDemoClient implements ClientModInitializer {
     private static final boolean FIRST_PERSON=Boolean.getBoolean("spectre.builderFirstPerson");
     private void block(int x,int y,int z,String state){plan.add(new Schematic.Block(new Schematic.Pos(x,y,z),"minecraft:"+state));}
     public void onInitializeClient(){
-        ThemeStore.get().communityPopup.set(false);ThemeStore.get().applyPreset(ThemeStore.PRESETS.getFirst());
+        ThemeStore.get().applyPreset(ThemeStore.PRESETS.getFirst());
         ClientTickEvents.END_CLIENT_TICK.register(this::tick);
     }
     private void tick(Minecraft mc){try{

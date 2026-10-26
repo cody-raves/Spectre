@@ -117,7 +117,6 @@ public final class ModuleMascotArt {
             case "hotkeys"->{keyboard(p,0,0,4);p.circle(-11+q*22,-3,4,RED);p.line(WHITE,2,-20,15,20,15);}
             case "tracers"->{p.rect(-14,-21,28,42,INK);p.rect(-18,-18,36,5,GOLD);p.rect(-18,13,36,5,GOLD);for(int i=0;i<5;i++)p.line(RED,2,-12,-11+i*5,12,-11+i*5);p.line(RED,2,13,1,24+w*6,-18);p.circle(24+w*6,-18,3,WHITE);}
             case "performance"->{p.rect(-16,-16,32,32,INK);p.rect(-12,-12,24,24,BLUE);for(int i=0;i<4;i++){p.line(GOLD,2,-21,-10+i*7,-16,-10+i*7);p.line(GOLD,2,16,-10+i*7,21,-10+i*7);}P g=p.at(0,0,t*3);for(int i=0;i<4;i++){P blade=g.at(0,0,i*1.57f);blade.poly(WHITE,0,0,9,-3,9,5);}p.circle(0,0,3,GOLD);}
-            case "discord-presence"->{p.rect(-23,-4,46,24,INK);p.rect(-19,-1,38,17,PURPLE);p.line(WHITE,2,-13,3,-13,11);p.line(WHITE,2,-17,7,-9,7);p.circle(12,5+w,2,BLUE);p.circle(16,10-w,2,RED);bubble(p,7,-19+q*3,BLUE);}
             default->throw new IllegalArgumentException("No exact-module mascot artwork for "+id);
         }
     }

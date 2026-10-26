@@ -120,7 +120,6 @@ public final class ModuleMascotCatalog {
         add("builder","Builder","Construction hard hat","Lifts the hard hat from his hand onto his head");
         add("tracers","Tracers","Thread spool","Draws a bright thread from a spool to a marker");
         add("performance","Performance","Chip cooling fan","Spins a cooling fan above a microchip");
-        add("discord-presence","Discord Presence","Gamepad chat badge","Taps a gamepad as a chat badge pops up");
     }
     private static void add(String id,String name,String prop,String action){
         if(entries.put(id,new Entry(id,name,prop,action))!=null)throw new IllegalStateException("Duplicate mascot: "+id);

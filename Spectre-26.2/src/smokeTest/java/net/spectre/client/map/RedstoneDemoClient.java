@@ -70,7 +70,7 @@ public final class RedstoneDemoClient implements ClientModInitializer {
         for(int i=0;i<c.getContainerSize();i++)if(c.getItem(i).is(item))return true;return false;
     }
     public void onInitializeClient(){
-        ThemeStore.get().communityPopup.set(false);ThemeStore.get().applyPreset(ThemeStore.PRESETS.getFirst());
+        ThemeStore.get().applyPreset(ThemeStore.PRESETS.getFirst());
         ClientTickEvents.END_CLIENT_TICK.register(this::tick);
     }
     private void next(int p){phase=p;ticks=0;}

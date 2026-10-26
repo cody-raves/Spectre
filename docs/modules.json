@@ -1,5 +1,5 @@
 {
-  "version": "0.9.0+mc26.2",
+  "version": "0.9.1+mc26.2",
   "modules": [
     {
       "id": "aim-assist",
@@ -1118,26 +1118,6 @@
           "default": ""
         },
         {
-          "label": "Webhook",
-          "type": "Boolean",
-          "default": "Off"
-        },
-        {
-          "label": "Webhook URL",
-          "type": "String",
-          "default": ""
-        },
-        {
-          "label": "Self Ping",
-          "type": "Boolean",
-          "default": "Off"
-        },
-        {
-          "label": "Discord ID",
-          "type": "String",
-          "default": ""
-        },
-        {
           "label": "Enable Panic Pay",
           "type": "Boolean",
           "default": "Off"
@@ -1276,11 +1256,6 @@
           "type": "Number",
           "default": "60.0",
           "range": "1.0 to 600.0"
-        },
-        {
-          "label": "Webhook URL",
-          "type": "String",
-          "default": ""
         }
       ],
       "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/SpawnerProtectModule.java"
@@ -6026,28 +6001,6 @@
         }
       ],
       "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/client/PerformanceModule.java"
-    },
-    {
-      "id": "discord-presence",
-      "name": "Discord Presence",
-      "description": "Shows Spectre Client and the server you are on in your Discord status.",
-      "category": "Spectre Client",
-      "action": false,
-      "hold": false,
-      "key": null,
-      "settings": [
-        {
-          "label": "Show Server IP",
-          "type": "Boolean",
-          "default": "On"
-        },
-        {
-          "label": "Discord Button",
-          "type": "Boolean",
-          "default": "On"
-        }
-      ],
-      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/DiscordPresenceModule.java"
     }
   ]
 }

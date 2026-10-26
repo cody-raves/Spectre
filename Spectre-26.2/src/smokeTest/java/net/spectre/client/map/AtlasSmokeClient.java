@@ -23,7 +23,7 @@ public final class AtlasSmokeClient implements ClientModInitializer {
     private static final String[] GUI_SHOTS={"modules","combat","movement","render","client","misc","donut","base-raid","base-builder","builder-workspace","visuals","hud-editor","appearance","profiles","friends"};
     public void onInitializeClient(){
         if(!Boolean.getBoolean("spectre.smoke"))throw new IllegalStateException("Smoke build is not distributable");
-        net.spectre.client.config.ThemeStore.get().communityPopup.set(false);
+
         if(ShowcaseCapture.ENABLED){
             net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents.CLIENT_STOPPING.register(mc->ShowcaseCapture.finish());
         }

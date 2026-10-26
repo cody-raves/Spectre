@@ -27,8 +27,7 @@ final class ProfileList {
    private static final float LABEL_W = 96.0F;
    private static final float FIELD_H = 30.0F;
    private static final long ARM_NANOS = 3000000000L;
-   private static final int DISCORD_LIMIT = 2000;
-   private static final String PRIVATE_NOTE = "Webhooks, macros, seeds and other private settings are not included.";
+   private static final String PRIVATE_NOTE = "Macros, seeds and other private settings are not included.";
    private final BiConsumer<String, Boolean> messages;
    private final ImString renameInput = new ImString(64);
    private final ImString serverInput = new ImString(256);
@@ -302,7 +301,7 @@ final class ProfileList {
       }
 
       if (ImGui.isItemHovered(65536)) {
-         ClickGuiRenderer.showTooltip("Save this profile as a .json file.\nWebhooks, macros, seeds and other private settings are not included.");
+         ClickGuiRenderer.showTooltip("Save this profile as a .json file.\nMacros, seeds and other private settings are not included.");
       }
 
       ImGui.setCursorPos(pad + actionW + gap, y);
@@ -312,7 +311,7 @@ final class ProfileList {
 
       if (ImGui.isItemHovered(65536)) {
          ClickGuiRenderer.showTooltip(
-            "Copy a share code. Others load it with Paste code.\nWebhooks, macros, seeds and other private settings are not included."
+            "Copy a share code. Others load it with Paste code.\nMacros, seeds and other private settings are not included."
          );
       }
 
@@ -420,7 +419,7 @@ final class ProfileList {
          Minecraft.getInstance().keyboardHandler.setClipboard(code);
          this.messages
             .accept(
-               code.length() > 2000 ? "Copied, but it is too long for Discord. Send the file instead" : "Share code for " + profile.name() + " copied", false
+               "Share code for " + profile.name() + " copied", false
             );
       } catch (ProfileException var4) {
          this.messages.accept(var4.getMessage(), true);

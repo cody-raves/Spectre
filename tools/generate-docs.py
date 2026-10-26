@@ -115,7 +115,7 @@ def main():
         raise ValueError("Module reference is incomplete or contains duplicate IDs")
     destination = ROOT / "docs/modules.json"
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text(json.dumps({"version": "0.9.0+mc26.2", "modules": output}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    destination.write_text(json.dumps({"version": re.search(r"version = '([^']+)'", (ROOT / "Spectre-26.2/build.gradle").read_text())[1], "modules": output}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Documented {len(output)} registered modules and {sum(len(m['settings']) for m in output)} module-specific controls")
 
 

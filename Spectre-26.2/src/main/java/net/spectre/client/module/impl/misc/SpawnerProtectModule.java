@@ -1,14 +1,10 @@
 package net.spectre.client.module.impl.misc;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadLocalRandom;
 import net.spectre.client.chat.ModuleChat;
 import net.spectre.client.event.impl.TickEvent;
@@ -19,9 +15,6 @@ import net.spectre.client.module.impl.render.FreelookModule;
 import net.spectre.client.module.setting.BooleanSetting;
 import net.spectre.client.module.setting.NumberSetting;
 import net.spectre.client.module.setting.StringSetting;
-import net.spectre.client.webhook.WebhookConfig;
-import net.spectre.client.webhook.WebhookPayloadBuilder;
-import net.spectre.client.webhook.WebhookService;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
@@ -53,12 +46,9 @@ import net.minecraft.world.level.block.ShulkerBoxBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Environment(EnvType.CLIENT)
 public final class SpawnerProtectModule extends ClientModule {
-   private static final Logger LOGGER = LoggerFactory.getLogger("Spectre");
    public static volatile SpawnerProtectModule active;
    private static final int SCAN_RADIUS = 16;
    private static final double RETARGET_DIST_SQR = 256.0;
@@ -82,11 +72,6 @@ public final class SpawnerProtectModule extends ClientModule {
    private static final int SHOP_ENDER_CHEST_SLOT = 9;
    private static final int SHOP_CONFIRM_SLOT = 25;
    private static final String DISCONNECT_REASON = "[SpawnerProtect] Görev tamamlandı, güvenli çıkış yapıldı.";
-   private static final ExecutorService WEBHOOK_EXECUTOR = Executors.newSingleThreadExecutor(runnable -> {
-      Thread thread = new Thread(runnable, "Spectre-SpawnerProtect-Webhook");
-      thread.setDaemon(true);
-      return thread;
-   });
    private final NumberSetting targetStackCount = this.addSetting("stack-to-deposit", new NumberSetting("Stack To Deposit", 3.0F, 1.0F, 30.0F).step(1.0F));
    private final NumberSetting scanRange = this.addSetting("trigger-range", new NumberSetting("Trigger Range", 64.0F, 16.0F, 128.0F).step(1.0F));
    private final NumberSetting rotationSpeed = this.addSetting("rotation-speed", new NumberSetting("Rotation Speed", 15.0F, 1.0F, 30.0F).step(1.0F));
@@ -99,7 +84,6 @@ public final class SpawnerProtectModule extends ClientModule {
    private final NumberSetting blockUpdateWindow = this.addSetting(
       "block-update-window", new NumberSetting("Block Update Window", 60.0F, 1.0F, 600.0F).step(1.0F)
    );
-   private final StringSetting webhookUrl = this.addSetting("webhook-url", new StringSetting("Webhook URL", ""));
    private SpawnerProtectModule.State currentState = SpawnerProtectModule.State.WAITING_FOR_STRANGER;
    private BlockPos targetBlock;
    private BlockPos targetChest;
@@ -124,7 +108,6 @@ public final class SpawnerProtectModule extends ClientModule {
       super("spawner-protect", "Spawner Protect", "Mines your spawners into an ender chest when someone gets close.", ModuleCategory.DONUT);
       this.usesNotifications();
       this.whitelist.privateValue();
-      this.webhookUrl.privateValue();
       this.whitelist.getImString().inputData.isResizable = true;
    }
 
@@ -291,15 +274,7 @@ public final class SpawnerProtectModule extends ClientModule {
                                  .value(pos.getY())
                                  .text(")")
                            );
-                           this.sendWebhook(
-                              "\ud83d\udea8 **UZAK TESPİT ("
-                                 + reason
-                                 + "):** Görünmez veya çok uzaktaki bir oyuncu blok kırdı! (Yatay Mesafe: "
-                                 + shownDistance
-                                 + "m, Y: "
-                                 + pos.getY()
-                                 + ")"
-                           );
+
                         }
                      }
                   }
@@ -706,7 +681,7 @@ public final class SpawnerProtectModule extends ClientModule {
 
    private void handleFinalExit(Minecraft mc) {
       if (this.lagWaitTicks == 0) {
-         this.sendWebhook("\ud83c\udfc1 **TAMAMLANDI.** Eşyaların kaydedilmesi için bekleniyor...");
+
          ModuleChat.send(this, ModuleChat.body().good("Done").text(": waiting ").value("2s").text(" for the server to save the items, then logging out"));
       }
 
@@ -829,35 +804,6 @@ public final class SpawnerProtectModule extends ClientModule {
       return count;
    }
 
-   private void sendWebhook(String message) {
-      String url = this.webhookUrl.get().trim();
-      if (!url.isEmpty()) {
-         if (!isValidWebhookUrl(url)) {
-            LOGGER.warn("[Spectre] Spawner Protect webhook URL is invalid; nothing was sent");
-         } else {
-            WebhookConfig config = new WebhookConfig(url);
-            WebhookPayloadBuilder payload = new WebhookPayloadBuilder().content(message);
-            WEBHOOK_EXECUTOR.execute(() -> {
-               try {
-                  SpawnerProtectModule.WebhookHolder.SERVICE.send(config, payload);
-               } catch (LinkageError | RuntimeException var3x) {
-                  LOGGER.warn("[Spectre] Spawner Protect webhook failed ({})", var3x.getClass().getSimpleName());
-               }
-            });
-         }
-      }
-   }
-
-   private static boolean isValidWebhookUrl(String url) {
-      try {
-         URI uri = new URI(url);
-         String scheme = uri.getScheme();
-         return uri.getHost() != null && ("https".equalsIgnoreCase(scheme) || "http".equalsIgnoreCase(scheme));
-      } catch (URISyntaxException var3) {
-         return false;
-      }
-   }
-
    @Environment(EnvType.CLIENT)
    private static enum State {
       WAITING_FOR_STRANGER,
@@ -870,8 +816,4 @@ public final class SpawnerProtectModule extends ClientModule {
       PLACING_ECHEST;
    }
 
-   @Environment(EnvType.CLIENT)
-   private static final class WebhookHolder {
-      static final WebhookService SERVICE = new WebhookService();
-   }
 }
