@@ -32,6 +32,7 @@ import net.spectre.client.module.impl.misc.AutoEatModule;
 import net.spectre.client.module.impl.misc.AutoReconnectModule;
 import net.spectre.client.module.impl.misc.AutoRelogModule;
 import net.spectre.client.module.impl.misc.AutoReplenishModule;
+import net.spectre.client.module.impl.misc.AutoRtpModule;
 import net.spectre.client.module.impl.misc.ChatMacroModule;
 import net.spectre.client.module.impl.misc.CoordSnapperModule;
 import net.spectre.client.module.impl.misc.DonutNoFallModule;
@@ -158,6 +159,7 @@ public final class BuiltinModuleProvider implements ModuleProvider {
          new NetheriteFinderModule(),
          new RenderDistanceToggleModule(),
          new HomeMetaModule(),
+         new AutoRtpModule(),
          new TridentUtilModule(),
          new QuantumModule(),
          new RenderUtilModule(),

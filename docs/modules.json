@@ -1443,6 +1443,74 @@
       "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/HomeMetaModule.java"
     },
     {
+      "id": "auto-rtp",
+      "name": "Auto RTP",
+      "description": "Random-teleports in a loop and scores each landing area for containers, hoppers, machines and redstone clues. Scores are leads to investigate, not proof of a base.",
+      "category": "Donut",
+      "action": false,
+      "hold": false,
+      "key": null,
+      "settings": [
+        {
+          "label": "RTP Command",
+          "type": "String",
+          "default": "rtp"
+        },
+        {
+          "label": "Delay (s)",
+          "type": "Number",
+          "default": "3.0",
+          "range": "1.0 to 30.0"
+        },
+        {
+          "label": "RTP Timeout (s)",
+          "type": "Number",
+          "default": "15.0",
+          "range": "1.0 to 60.0"
+        },
+        {
+          "label": "Settle Time (s)",
+          "type": "Number",
+          "default": "2.0",
+          "range": "0.0 to 10.0"
+        },
+        {
+          "label": "Scan Radius (chunks)",
+          "type": "Number",
+          "default": "1.0",
+          "range": "0.0 to 4.0"
+        },
+        {
+          "label": "Report Score",
+          "type": "Number",
+          "default": "4.0",
+          "range": "1.0 to 100.0"
+        },
+        {
+          "label": "Stop On Hit",
+          "type": "Boolean",
+          "default": "On"
+        },
+        {
+          "label": "Max RTPs",
+          "type": "Number",
+          "default": "20.0",
+          "range": "0.0 to 500.0"
+        },
+        {
+          "label": "Include Natural Clues",
+          "type": "Boolean",
+          "default": "Off"
+        },
+        {
+          "label": "Log Every Scan",
+          "type": "Boolean",
+          "default": "Off"
+        }
+      ],
+      "source": "Spectre-26.2/src/main/java/net/spectre/client/module/impl/misc/AutoRtpModule.java"
+    },
+    {
       "id": "trident-util",
       "name": "Trident Util",
       "description": "Use tridents out of water and charge them faster.",
